@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Студия красоты Каре — стрижки, окрашивание и маникюр в Калининграде | ул. Виктора Денисова, 16</title>
+<meta name="description" content="Студия красоты Каре в Калининграде: женские и мужские стрижки, сложные окрашивания, маникюр и педикюр. Запись по времени — без очередей. ул. Виктора Денисова, 16 к1. Тел. +7 (921) 262-43-08">
+<!-- @@METRIKA@@ -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23A65061'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23FBF7F4' text-anchor='middle'%3E%D0%9A%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --cream:#FBF7F4;
+  --rose-100:#F6E9E6;
+  --rose-200:#EDD5D0;
+  --rose-300:#DCAAA5;
+  --rose-500:#B96A76;
+  --rose-600:#A65061;
+  --rose-700:#8C3F51;
+  --plum-900:#251B20;
+  --plum-800:#32242C;
+  --plum-700:#3E2D36;
+  --ink:#2E2228;
+  --muted:#77626A;
+  --copper:#C98B63;
+  --line:#EADCD7;
+  --white:#FFFFFF;
+  --shadow:0 20px 50px -20px rgba(46,34,40,.25);
+  --radius:20px;
+  --font-head:Georgia,"Times New Roman",Times,serif;
+  --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:var(--font-body);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--font-head);font-weight:600;line-height:1.15;letter-spacing:.01em}
+h2{font-size:clamp(28px,4.2vw,44px)}
+.overline{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-600)}
+.overline::before{content:"";width:34px;height:1.5px;background:var(--rose-500)}
+.section{padding:96px 0}
+.section-sub{color:var(--muted);max-width:640px;margin-top:14px;font-size:17px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;border-radius:14px;border:none;font-family:var(--font-body);font-size:16px;font-weight:600;letter-spacing:.02em;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;white-space:nowrap}
+.btn-primary{background:linear-gradient(135deg,#CE8390 0%,#A65061 60%,#8C3F51 100%);color:#fff;box-shadow:0 14px 30px -10px rgba(166,80,97,.55)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 38px -12px rgba(166,80,97,.65)}
+.btn-primary:active{transform:translateY(0)}
+.btn-ghost{background:transparent;border:1.5px solid rgba(46,34,40,.22);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--rose-600);color:var(--rose-600);transform:translateY(-2px)}
+.btn-light{background:rgba(255,255,255,.08);border:1.5px solid rgba(251,247,244,.35);color:var(--cream)}
+.btn-light:hover{background:rgba(255,255,255,.16);transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;fill:currentColor;flex:none}
+:focus-visible{outline:3px solid rgba(166,80,97,.45);outline-offset:2px;border-radius:8px}
+::selection{background:var(--rose-300);color:var(--plum-900)}
+.header{position:sticky;top:0;z-index:60;background:rgba(251,247,244,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+.header.scrolled{border-bottom-color:var(--line);box-shadow:0 10px 30px -18px rgba(46,34,40,.25)}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 24px;max-width:1160px;margin:0 auto}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:var(--font-head);font-size:28px;letter-spacing:.34em;color:var(--plum-900);font-weight:700}
+.logo span{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose-600);margin-top:6px}
+.header-right{display:flex;align-items:center;gap:18px}
+.header-hours{font-size:13.5px;color:var(--muted);text-align:right;line-height:1.45}
+.header-hours b{color:var(--ink);font-weight:600}
+.header-phone{font-family:var(--font-head);font-size:19px;font-weight:700;color:var(--plum-900);letter-spacing:.03em}
+.header-phone:hover{color:var(--rose-600)}
+.header .btn{padding:12px 22px;font-size:14.5px}
+.hero{position:relative;overflow:hidden;background:radial-gradient(1100px 520px at 85% -10%,var(--rose-100) 0%,rgba(251,247,244,0) 70%),var(--cream)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:72px 0 88px}
+.hero h1{font-size:clamp(32px,4.9vw,58px);color:var(--plum-900);margin:22px 0 20px}
+.hero h1 em{font-style:italic;color:var(--rose-600)}
+.hero-text p.lead{font-size:clamp(16px,1.6vw,19px);color:var(--muted);max-width:520px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.hero-badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.badge{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:13.5px;font-weight:600;color:var(--ink);box-shadow:0 8px 20px -12px rgba(46,34,40,.25)}
+.badge svg{width:15px;height:15px;fill:var(--copper);flex:none}
+.badge .src{color:var(--muted);font-weight:500}
+.hero-photo{position:relative}
+.hero-photo .frame{position:relative;background:#fff;padding:12px;border-radius:26px;box-shadow:var(--shadow)}
+.hero-photo .frame::after{content:"";position:absolute;inset:-16px 16px 16px -16px;border:1.5px solid var(--rose-300);border-radius:30px;z-index:-1}
+.hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px}
+.hero-photo .hours-card{position:absolute;left:26px;bottom:26px;background:rgba(37,27,32,.88);backdrop-filter:blur(6px);color:var(--cream);border-radius:14px;padding:12px 18px;font-size:13.5px;line-height:1.5;box-shadow:0 14px 30px -12px rgba(0,0,0,.5)}
+.hours-card b{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-300);margin-bottom:4px}
+.lamp-deco{position:absolute;pointer-events:none;opacity:.5;z-index:0}
+.lamp-deco svg{stroke:var(--rose-300);fill:none;stroke-width:1.4}
+.lamp-1{top:6%;right:44%;width:110px}
+.lamp-2{bottom:8%;left:46%;width:80px;opacity:.35}
+.ticker{background:var(--plum-900);color:var(--cream);padding:20px 0}
+.ticker-in{display:flex;flex-wrap:wrap;gap:12px 0;justify-content:center;align-items:center}
+.ticker span{font-family:var(--font-head);font-size:15.5px;letter-spacing:.06em;padding:0 22px;position:relative;white-space:nowrap}
+.ticker span::after{content:"";position:absolute;right:-4px;top:50%;width:5px;height:5px;border-radius:50%;background:var(--rose-500);transform:translateY(-50%)}
+.ticker span:last-child::after{display:none}
+.ticker .price{color:var(--rose-300)}
+.dark{background:linear-gradient(180deg,var(--plum-900) 0%,var(--plum-800) 100%);color:var(--cream)}
+.dark .overline{color:var(--rose-300)}
+.dark .overline::before{background:var(--rose-300)}
+.dark .section-sub{color:rgba(251,247,244,.65)}
+.works-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px}
+.work-card{background:var(--plum-700);border:1px solid rgba(251,247,244,.09);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s ease,box-shadow .3s ease}
+.work-card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -20px rgba(0,0,0,.55)}
+.work-card .ph{padding:12px 12px 0}
+.work-card img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px}
+.work-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.work-tag{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-300);background:rgba(220,170,165,.12);border:1px solid rgba(220,170,165,.3);border-radius:999px;padding:5px 12px}
+.work-body h3{font-size:21px;color:var(--cream)}
+.work-price{font-size:15px;color:rgba(251,247,244,.75)}
+.work-price b{color:var(--cream);font-size:17px}
+.work-btn{margin-top:auto;align-self:flex-start;background:none;border:none;color:var(--rose-300);font-family:var(--font-body);font-size:14.5px;font-weight:700;letter-spacing:.06em;cursor:pointer;padding:6px 0;border-bottom:1.5px solid rgba(220,170,165,.4);transition:color .25s,border-color .25s}
+.work-btn:hover{color:#fff;border-color:#fff}
+.prices-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:52px}
+.price-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 34px 28px;box-shadow:0 16px 40px -24px rgba(46,34,40,.25)}
+.price-card h3{font-size:24px;color:var(--plum-900);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.price-card h3 svg{width:22px;height:22px;fill:var(--rose-600);flex:none}
+.price-row{display:flex;align-items:baseline;gap:10px;padding:11px 0;font-size:16px}
+.price-row .name{color:var(--ink)}
+.price-row .dots{flex:1;border-bottom:2px dotted var(--rose-300);transform:translateY(-4px)}
+.price-row .val{font-weight:700;color:var(--rose-700);white-space:nowrap}
+.price-row .val.req{color:var(--muted);font-weight:600;font-size:14.5px}
+.price-note{margin-top:26px;background:var(--rose-100);border-left:4px solid var(--rose-500);border-radius:12px;padding:18px 22px;font-size:15px;color:var(--ink)}
+.price-note b{color:var(--rose-700)}
+.prices-cta{margin-top:40px;display:flex;align-items:center;justify-content:space-between;gap:24px;background:linear-gradient(135deg,var(--rose-100),#fff);border:1px solid var(--line);border-radius:var(--radius);padding:30px 36px;flex-wrap:wrap}
+.prices-cta p{font-size:18px;font-family:var(--font-head);color:var(--plum-900);max-width:560px}
+.team-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center;margin-top:52px}
+.team-photo .frame{background:#fff;padding:10px;border-radius:22px;box-shadow:var(--shadow)}
+.team-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px}
+.team-cards{display:flex;flex-direction:column;gap:20px}
+.team-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 30px;box-shadow:0 14px 36px -22px rgba(46,34,40,.25)}
+.team-card h3{font-size:23px;color:var(--plum-900)}
+.team-card .role{display:inline-block;margin:8px 0 12px;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-600);background:var(--rose-100);border-radius:999px;padding:5px 13px}
+.team-card p{color:var(--muted);font-size:15.5px}
+.team-card p b{color:var(--ink)}
+.why-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:start;margin-top:52px}
+.why-photo .frame{background:#fff;padding:10px;border-radius:22px;box-shadow:var(--shadow)}
+.why-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px}
+.why-photo figcaption{padding:14px 8px 6px;font-size:13.5px;color:var(--muted);font-style:italic;font-family:var(--font-head)}
+.why-tiles{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.why-tile{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 24px;transition:transform .3s,box-shadow .3s}
+.why-tile:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(46,34,40,.3)}
+.why-tile .num{font-family:var(--font-head);font-size:15px;color:var(--rose-500);letter-spacing:.1em}
+.why-tile h3{font-size:19px;margin:10px 0 8px;color:var(--plum-900)}
+.why-tile p{font-size:14.5px;color:var(--muted)}
+.reviews-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:52px}
+.review-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;min-height:240px;position:relative;box-shadow:0 14px 36px -24px rgba(46,34,40,.25)}
+.review-card::before{content:"\201C";font-family:var(--font-head);font-size:64px;line-height:1;color:var(--rose-300);position:absolute;top:18px;left:22px}
+.review-card::after{content:"";position:absolute;bottom:24px;left:26px;right:26px;height:8px;background:linear-gradient(90deg,var(--rose-200) 70%,transparent);border-radius:4px;opacity:.55}
+.contact{background:var(--rose-100)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:52px;align-items:start}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:38px 36px;box-shadow:var(--shadow)}
+.form-card h3{font-size:26px;color:var(--plum-900);margin-bottom:8px}
+.form-card .form-hint{color:var(--muted);font-size:14.5px;margin-bottom:24px}
+.form-row{margin-bottom:16px}
+.form-row label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.form-row input,.form-row select{width:100%;border:1.5px solid var(--line);background:var(--cream);border-radius:12px;padding:14px 16px;font-size:16px;font-family:var(--font-body);color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.form-row input:focus,.form-row select:focus{outline:none;border-color:var(--rose-500);box-shadow:0 0 0 4px rgba(185,106,118,.15)}
+.form-2col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-card .btn{width:100%;margin-top:8px}
+.form-privacy{margin-top:14px;font-size:12.5px;color:var(--muted);text-align:center}
+.form-success{background:var(--rose-100);border:1px solid var(--rose-300);border-radius:14px;padding:26px;text-align:center}
+.form-success b{font-family:var(--font-head);font-size:20px;color:var(--rose-700);display:block;margin-bottom:8px}
+.contact-info{display:flex;flex-direction:column;gap:18px}
+.info-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 26px;display:flex;gap:16px;align-items:flex-start}
+.info-card svg{width:22px;height:22px;fill:var(--rose-600);flex:none;margin-top:2px}
+.info-card .lbl{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.info-card .val{font-size:17px;font-weight:600;color:var(--plum-900);line-height:1.45}
+.info-card .val a:hover{color:var(--rose-600)}
+.info-card .sub{font-size:13.5px;color:var(--muted);margin-top:3px}
+.facade-card{border-radius:18px;overflow:hidden;position:relative;box-shadow:var(--shadow)}
+.facade-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.map-box{margin-top:44px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+.map-box iframe{display:block;width:100%;height:360px;border:0}
+.footer{background:var(--plum-900);color:rgba(251,247,244,.6);padding:40px 0}
+.footer-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13.5px}
+.footer b{color:var(--cream);font-family:var(--font-head);letter-spacing:.24em}
+.sticky-bar{display:none;position:fixed;left:14px;right:14px;bottom:14px;z-index:70;gap:10px}
+.sticky-bar .btn{padding:15px 18px}
+.sticky-bar .btn-primary{flex:1}
+.sticky-bar .btn-ghost{background:#fff}
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-overlay{position:absolute;inset:0;background:rgba(37,27,32,.66);backdrop-filter:blur(4px)}
+.modal-box{position:relative;background:#fff;border-radius:24px;max-width:480px;width:100%;padding:38px 34px;box-shadow:0 40px 90px -30px rgba(0,0,0,.5);max-height:92vh;overflow:auto;animation:pop .3s ease}
+@keyframes pop{from{transform:translateY(18px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-close{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:none;background:var(--rose-100);color:var(--rose-700);font-size:20px;cursor:pointer;transition:background .2s}
+.modal-close:hover{background:var(--rose-200)}
+@media (max-width:1024px){
+  .works-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid{gap:36px}
+  .lamp-deco{display:none}
+}
+@media (max-width:960px){
+  .section{padding:72px 0}
+  .hero-grid{grid-template-columns:1fr;padding:48px 0 72px}
+  .hero-photo{max-width:640px}
+  .team-grid,.why-grid,.contact-grid{grid-template-columns:1fr}
+  .team-photo,.why-photo{max-width:560px}
+  .prices-grid{grid-template-columns:1fr}
+  .header-hours{display:none}
+}
+@media (max-width:768px){
+  .sticky-bar{display:flex}
+  body{padding-bottom:76px}
+  .header-phone{display:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  .works-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .why-tiles{grid-template-columns:1fr}
+  .form-2col{grid-template-columns:1fr}
+  .price-card{padding:26px 22px}
+  .form-card{padding:28px 22px}
+  .prices-cta{padding:24px}
+  .hero-photo .hours-card{left:16px;bottom:16px;font-size:12.5px}
+}
+/* ALTAVALTA подпись */
+.footer-brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:18px;padding-top:14px;border-top:1px solid rgba(193,154,91,.22);flex-wrap:wrap}
+.brand-made{color:#7d8a74;font-family:'Jost',sans-serif;font-size:9.5px;font-weight:500;letter-spacing:.24em;text-transform:lowercase}
+.brand-link{display:inline-flex;align-items:center;text-decoration:none;transition:opacity .3s}
+.brand-link:hover{opacity:.8}
+.sig-name{display:inline-flex;color:#d8d2c2;font-family:'Jost',sans-serif;font-size:12px;font-weight:700;gap:.08em;text-transform:uppercase;line-height:1}
+.sig-name b{font-weight:inherit}
+.brand-core{color:var(--gold);animation:v-pulse-brand 2.8s ease-in-out infinite}
+@keyframes v-pulse-brand{0%,68%{color:var(--gold);text-shadow:0 0 0 rgba(245,217,168,0)}85%{color:#f5d9a8;text-shadow:0 0 18px rgba(245,217,168,.7),0 0 42px rgba(245,217,168,.35)}100%{color:var(--gold);text-shadow:0 0 0 rgba(245,217,168,0)}}
+  .demo-ribbon{position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;justify-content:center;gap:16px;background:var(--plum-800);border-bottom:1px solid rgba(201,139,99,.5);padding:10px 16px;color:#F6EDE8}
+  .demo-label{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+  .demo-remove{background:transparent;border:1px solid rgba(201,139,99,.6);color:var(--copper);border-radius:999px;padding:6px 16px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit}
+  .demo-label{font-size:10.5px;letter-spacing:.12em}
+  .demo-remove{padding:5px 10px;font-size:11px}
+  body.demo-off .demo-ribbon{display:none}
+</style>
+</head>
+<body>
+<div class="demo-ribbon" id="demoRibbon" role="note">
+  <span class="demo-label"><b>Демо-версия</b><i></i><span class="dl-sub">сделано для вас </span><b class="dl-love">с любовью</b></span>
+  <button type="button" class="demo-remove" id="demoRemove">Убрать метку</button>
+</div>
+<header class="header" id="header">
+  <div class="header-in">
+    <a class="logo" href="#top" aria-label="Студия красоты Каре">
+      <b>КАРЕ</b>
+      <span>студия красоты</span>
+    </a>
+    <div class="header-right">
+      <div class="header-hours">ежедневно<br><b>пн–сб 10:00–19:00 · вс 10:00–18:00</b></div>
+      <a class="header-phone" href="tel:+79212624308">+7 (921) 262-43-08</a>
+      <button class="btn btn-primary" data-open-modal>Записаться</button>
+    </div>
+  </div>
+</header>
+<main id="top">
+<section class="hero">
+  <div class="lamp-deco lamp-1" aria-hidden="true"><svg viewBox="0 0 120 160"><polygon points="60,4 108,52 92,128 28,128 12,52"/><polygon points="60,4 28,128 108,52 12,52 92,128 60,4"/><line x1="60" y1="0" x2="60" y2="4"/></svg></div>
+  <div class="lamp-deco lamp-2" aria-hidden="true"><svg viewBox="0 0 120 160"><polygon points="60,4 108,52 92,128 28,128 12,52"/><polygon points="60,4 28,128 108,52 12,52 92,128 60,4"/></svg></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="overline">Студия красоты Каре · Калининград</span>
+        <h1>Стрижки, окрашивание и маникюр — <em>как вы хотели</em>, а не как получится</h1>
+        <p class="lead">Камерная студия в ЖК «Восток» на улице Виктора Денисова. Работаем по записи: без очередей и спешки. Мастер сначала слушает вас — и только потом берёт в руки ножницы.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" data-open-modal>Записаться</button>
+          <a class="btn btn-ghost" href="tel:+79212624308"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.5 2.9 3.7 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>Позвонить</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>4,8 <span class="src">— рейтинг в 2ГИС</span></span>
+          <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg>4,4 <span class="src">— Яндекс Карты</span></span>
+          <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>ул. Виктора Денисова, 16 к1</span>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="frame">
+          <!-- @@PHOTO:hero@@ описание: светлый интерьер студии — кресла, зеркала, розовые стены, геометрические светильники; горизонтальное фото -->
+          <img src="img/PHOTO_kare_photo21.jpg" alt="Интерьер студии красоты Каре: кресла, зеркала и тёплый свет">
+          <div class="hours-card"><b>Режим работы</b>пн–сб 10:00–19:00 · вс 10:00–18:00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="ticker" aria-hidden="true">
+  <div class="wrap ticker-in">
+    <span>Женская стрижка — <b class="price">от 800 ₽</b></span>
+    <span>Мужская стрижка — <b class="price">от 400 ₽</b></span>
+    <span>Сложные окрашивания</span>
+    <span>Маникюр и педикюр</span>
+    <span>Запись без очередей</span>
+  </div>
+</div>
+<section class="section dark" id="works">
+  <div class="wrap">
+    <span class="overline">Работы мастеров</span>
+    <h2>Хочу как здесь</h2>
+    <p class="section-sub">Реальные работы наших мастеров. Нажмите на фото — откроем форму записи с уже выбранной услугой.</p>
+    <div class="works-grid">
+      <article class="work-card">
+        <div class="ph"><!-- @@PHOTO:work_1@@ описание: короткая стрижка пикси на светлых волосах, вид сзади; вертикальное фото -->
+          <img src="img/PHOTO_kare_photo05.jpg" alt="Короткая стрижка пикси со светлым окрашиванием"></div>
+        <div class="work-body">
+          <span class="work-tag">Стрижка + цвет</span>
+          <h3>Пикси с воздушной текстурой</h3>
+          <p class="work-price">женская стрижка — <b>от 800 ₽</b></p>
+          <button class="work-btn" data-open-modal data-service="Женская стрижка">Хочу так же →</button>
+        </div>
+      </article>
+      <article class="work-card">
+        <div class="ph"><!-- @@PHOTO:work_2@@ описание: женский боб на светлых волосах, аккуратная укладка; вертикальное фото -->
+          <img src="img/PHOTO_kare_photo18.jpg" alt="Женская стрижка боб с укладкой"></div>
+        <div class="work-body">
+          <span class="work-tag">Стрижка</span>
+          <h3>Боб с мягкой линией</h3>
+          <p class="work-price">женская стрижка — <b>от 800 ₽</b></p>
+          <button class="work-btn" data-open-modal data-service="Женская стрижка">Хочу так же →</button>
+        </div>
+      </article>
+      <article class="work-card">
+        <div class="ph"><!-- @@PHOTO:work_3@@ описание: волнистые волосы средней длины с натуральным окрашиванием; вертикальное фото -->
+          <img src="img/PHOTO_kare_photo24.jpg" alt="Сложное окрашивание и волнистая укладка на средних волосах"></div>
+        <div class="work-body">
+          <span class="work-tag">Окрашивание</span>
+          <h3>Глубокий цвет и лёгкие волны</h3>
+          <p class="work-price">стоимость — <b>по запросу</b></p>
+          <button class="work-btn" data-open-modal data-service="Сложное окрашивание">Хочу так же →</button>
+        </div>
+      </article>
+      <article class="work-card">
+        <div class="ph"><!-- @@PHOTO:work_4@@ описание: вьющиеся светлые волосы, подобрана форма и уход; вертикальное фото -->
+          <img src="img/PHOTO_kare_photo27.jpg" alt="Стрижка на вьющихся светлых волосах"></div>
+        <div class="work-body">
+          <span class="work-tag">Форма + уход</span>
+          <h3>Кудри, которые держат форму</h3>
+          <p class="work-price">женская стрижка — <b>от 800 ₽</b></p>
+          <button class="work-btn" data-open-modal data-service="Женская стрижка">Хочу так же →</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section" id="prices">
+  <div class="wrap">
+    <span class="overline">Услуги и цены</span>
+    <h2>Прайс без сюрпризов</h2>
+    <p class="section-sub">Честные цены районной студии: вы платите за результат и аккуратность, а не за «премиум-воздух».</p>
+    <div class="prices-grid">
+      <div class="price-card">
+        <h3><svg viewBox="0 0 24 24"><path d="M9.6 4.8C7 4.8 4.8 7 4.8 9.6c0 4.4 5.6 10 7.2 11.5 1.6-1.5 7.2-7.1 7.2-11.5 0-2.6-2.2-4.8-4.8-4.8-1 0-1.8.3-2.4.8-.6-.5-1.4-.8-2.4-.8z" opacity="0"/><path d="M6 9a3 3 0 1 0 3 3l8.8 8.3 1.4-1.4-6.6-6.6 1.4-1.4 6.6 6.6 1.4-1.4L13.7 7.8A3 3 0 1 0 6 9zm3-1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm12.8-4.6L11.9 13.3l-1.4-1.4L20.4 2l1.4 1.4zM6 15a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>Волосы</h3>
+        <div class="price-row"><span class="name">Женская стрижка</span><span class="dots"></span><span class="val">от 800 ₽</span></div>
+        <div class="price-row"><span class="name">Мужская стрижка</span><span class="dots"></span><span class="val">от 400 ₽</span></div>
+        <div class="price-row"><span class="name">Детская стрижка</span><span class="dots"></span><span class="val req">по запросу</span></div>
+        <div class="price-row"><span class="name">Сложное окрашивание</span><span class="dots"></span><span class="val req">по запросу</span></div>
+        <div class="price-row"><span class="name">Химическая завивка</span><span class="dots"></span><span class="val req">по запросу</span></div>
+        <div class="price-row"><span class="name">Прикорневой объём</span><span class="dots"></span><span class="val req">по запросу</span></div>
+        <div class="price-row"><span class="name">Укладки и плетение кос</span><span class="dots"></span><span class="val req">по запросу</span></div>
+        <div class="price-row"><span class="name">Уход и восстановление волос</span><span class="dots"></span><span class="val req">по запросу</span></div>
+      </div>
+      <div class="price-card">
+        <h3><svg viewBox="0 0 24 24"><path d="M12 2c1.7 0 3 1.3 3 3v6.5c2.8.6 5 2.4 5 5.5 0 2.5-2 5-8 5s-8-2.5-8-5c0-3.1 2.2-4.9 5-5.5V5c0-1.7 1.3-3 3-3z" opacity="0"/><path d="M17.5 2a4.5 4.5 0 0 0-4.4 5.5l1.9-.4a2.5 2.5 0 1 1 2.5 2.9H16v2h1.5a4.5 4.5 0 0 0 0-9zM10 8c-4 3-7 7.5-7 10.5C3 20.5 4.5 22 7 22c3.5 0 6-2.5 6-6 0-2.5-1-6-3-8z"/></svg>Ногти</h3>
+        <div class="price-row"><span class="name">Аппаратный маникюр</span><span class="dots"></span><span class="val req">по запросу</span></div>
+        <div class="price-row"><span class="name">Маникюр с гель-лаком</span><span class="dots"></span><span class="val req">по запросу</span></div>
+        <div class="price-row"><span class="name">Дизайн ногтей</span><span class="dots"></span><span class="val req">по запросу</span></div>
+        <div class="price-row"><span class="name">Снятие гель-лака</span><span class="dots"></span><span class="val req">по запросу</span></div>
+        <div class="price-row"><span class="name">Наращивание ногтей</span><span class="dots"></span><span class="val req">по запросу</span></div>
+        <div class="price-row"><span class="name">Педикюр</span><span class="dots"></span><span class="val req">по запросу</span></div>
+      </div>
+    </div>
+    <div class="price-note"><b>Точную стоимость мастер подтвердит при записи</b> — после короткой консультации по длине, состоянию волос или ногтей. Никаких доплат «по факту».</div>
+    <div class="prices-cta">
+      <p>Не знаете, что подойдёт именно вам? Позвоните — подскажем и подберём удобное время за пару минут.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <button class="btn btn-primary" data-open-modal>Записаться</button>
+        <a class="btn btn-ghost" href="tel:+79212624308">Позвонить</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="team" style="background:var(--rose-100)">
+  <div class="wrap">
+    <span class="overline">Команда</span>
+    <h2>Мастера, которым доверяют руки</h2>
+    <p class="section-sub">К нам ходят годами и приводят подруг — для районной студии это лучшая рекомендация.</p>
+    <div class="team-grid">
+      <div class="team-photo">
+        <div class="frame"><!-- @@PHOTO:team@@ описание: мастера студии в интерьере салона, тёплая дружеская атмосфера; вертикальное фото -->
+          <img src="img/PHOTO_kare_photo07.jpg" alt="Мастера студии красоты Каре в интерьере салона"></div>
+      </div>
+      <div class="team-cards">
+        <div class="team-card">
+          <h3>Карина</h3>
+          <span class="role">Парикмахер-стилист</span>
+          <p>Стрижки, окрашивания, формы под ваш тип волос. Постоянные клиенты стригутся у Ирины <b>по пять лет и больше</b> — и не меняют мастера.</p>
+        </div>
+        <div class="team-card">
+          <h3>Мастер маникюра</h3>
+          <span class="role">Мастер маникюра и педикюра</span>
+          <p>Аккуратный аппаратный маникюр, гель-лак, педикюр. Гости отмечают аккуратность и стойкое покрытие.</p>
+        </div>
+        <div class="team-card">
+          <h3>Запись — под задачу</h3>
+          <span class="role">Администратор</span>
+          <p>Позвоните или оставьте заявку — администратор подберёт мастера, услугу и время, которое удобно именно вам.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="why">
+  <div class="wrap">
+    <span class="overline">Почему мы</span>
+    <h2>Салон у дома — с большим вниманием к деталям</h2>
+    <div class="why-grid">
+      <figure class="why-photo">
+        <div class="frame"><!-- @@PHOTO:interior@@ описание: просторный светлый зал студии: паркет «ёлочкой», розовые стены, рабочие места и маникюрная зона; горизонтальное фото -->
+          <img src="img/PHOTO_kare_photo25.jpg" alt="Просторный зал студии Каре: паркет ёлочкой и уютные рабочие места"></div>
+        <figcaption>Светлый зал студии — ЖК «Восток», ул. Виктора Денисова, 16 к1</figcaption>
+      </figure>
+      <div class="why-tiles">
+        <div class="why-tile">
+          <span class="num">01</span>
+          <h3>Запись по времени</h3>
+          <p>Вы не ждёте в очереди и не пересекаетесь с толпой: время и мастер закреплены только за вами.</p>
+        </div>
+        <div class="why-tile">
+          <span class="num">02</span>
+          <h3>Стерильно и аккуратно</h3>
+          <p>Инструменты проходят полную обработку, расходники — одноразовые. Вскрываем при вас.</p>
+        </div>
+        <div class="why-tile">
+          <span class="num">03</span>
+          <h3>Рядом с домом</h3>
+          <p>Первый этаж жилого комплекса на Денисова, 16: пара минут пешком, без пробок и парковок.</p>
+        </div>
+        <div class="why-tile">
+          <span class="num">04</span>
+          <h3>Сначала консультация</h3>
+          <p>Бесплатно обсудим форму и цвет до процедуры: мастер подберёт решение под вас, а не «по прайсу».</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <span class="overline">Отзывы</span>
+    <h2>Гости говорят лучше нас</h2>
+    <p class="section-sub">Отзывы с Яндекс Карт и 2ГИС — мы не пишем их себе сами, их пишут те, кто выходит из кресла довольным.</p>
+    <div class="reviews-grid">
+      <article class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>Очень хорошее место! Классно постригли, хожу к Карине и всем довольна. Всё супер, буду продолжать ходить только сюда и никуда больше.</p>
+        <div class="rev-sign">Захария Бурдюк<span>отзыв на Яндекс.Картах</span></div>
+      </article>
+      <article class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>Отличный мастер Карина! Хожу только к ней. Душевная, с чувством юмора и позитива. В салоне всегда дружелюбная атмосфера и не хочется оттуда уходить.</p>
+        <div class="rev-sign">Виктория Кисель<span>отзыв на Яндекс.Картах</span></div>
+      </article>
+      <article class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>Отличный мужской мастер Карина, стригусь у неё с 2019 года!</p>
+        <div class="rev-sign">Денис М<span>отзыв на Яндекс.Картах</span></div>
+      </article>
+      <article class="review-card">
+        <span class="stars">★★★★★</span>
+        <p>Очень светлый и уютный салон красоты. Современный дизайн, удобное местоположение. В салоне работают настоящие профессионалы и мастера своего дела. Особенно хочу отметить работу и золотые руки Ирины — парикмахер экстра-класса! Спасибо за работу и хорошее настроение.</p>
+        <div class="rev-sign">Марина Кузнецова<span>отзыв на Яндекс.Картах</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section contact" id="booking">
+  <div class="wrap">
+    <span class="overline">Запись и контакты</span>
+    <h2>Выберите удобное время</h2>
+    <p class="section-sub">Оставьте заявку — администратор перезвонит, подтвердит стоимость и подберёт время. Работаем по предварительной записи.</p>
+    <div class="contact-grid">
+      <div class="form-card">
+        <h3>Онлайн-запись</h3>
+        <p class="form-hint">Займёт меньше минуты. Перезвоним в рабочее время студии.</p>
+        <div class="form-wrap">
+          <form class="book-form" novalidate>
+            <div class="form-row">
+              <label for="f-name">Ваше имя</label>
+              <input id="f-name" name="name" type="text" placeholder="Например, Анна" required autocomplete="name">
+            </div>
+            <div class="form-row">
+              <label for="f-phone">Телефон</label>
+              <input id="f-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+            </div>
+            <div class="form-row">
+              <label for="f-service">Услуга</label>
+              <select id="f-service" name="service" required>
+                <option value="" selected disabled>Выберите услугу</option>
+                <option>Женская стрижка</option>
+                <option>Мужская стрижка</option>
+                <option>Детская стрижка</option>
+                <option>Сложное окрашивание</option>
+                <option>Химическая завивка</option>
+                <option>Прикорневой объём</option>
+                <option>Укладка / плетение</option>
+                <option>Маникюр с гель-лаком</option>
+                <option>Педикюр</option>
+                <option>Другое / подскажу по телефону</option>
+              </select>
+            </div>
+            <div class="form-2col">
+              <div class="form-row">
+                <label for="f-date">Дата</label>
+                <input id="f-date" name="date" type="date" required>
+              </div>
+              <div class="form-row">
+                <label for="f-time">Желаемое время</label>
+                <select id="f-time" name="time" required>
+                  <option value="" selected disabled>Выберите</option>
+                  <option>Любое</option>
+                  <option>Утро (10:00–12:00)</option>
+                  <option>День (12:00–15:00)</option>
+                  <option>Вечер (15:00–19:00)</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Записаться</button>
+            <p class="form-privacy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+          </form>
+        </div>
+      </div>
+      <div class="contact-info">
+        <div class="info-card">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.5 2.9 3.7 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.4 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          <div>
+            <div class="lbl">Телефон записи</div>
+            <div class="val"><a href="tel:+79212624308">+7 (921) 262-43-08</a></div>
+            <div class="sub">Звоните ежедневно с 10:00 до 19:00 (вс — до 18:00)</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          <div>
+            <div class="lbl">Адрес</div>
+            <div class="val">Калининград, ул. Виктора Денисова, 16, корп. 1</div>
+            <div class="sub">1 этаж, ЖК «Восток» · <a href="https://yandex.ru/maps/org/kare/95985406780/" target="_blank" rel="noopener" style="border-bottom:1px solid var(--rose-300)">построить маршрут</a></div>
+          </div>
+        </div>
+        <div class="info-card">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5h-2v6l4.7 2.8 1-1.6-3.7-2.2V7z"/></svg>
+          <div>
+            <div class="lbl">Часы работы</div>
+            <div class="val">пн–сб: 10:00–19:00 · вс: 10:00–18:00</div>
+            <div class="sub">Ежедневно, без перерывов</div>
+          </div>
+        </div>
+        <div class="facade-card">
+          <!-- @@PHOTO:facade@@ описание: вход в студию: стеклянная дверь с табличкой режима работы, светлый фасад и белые колонны; горизонтальное фото -->
+          <img src="img/PHOTO_kare_photo29.jpg" alt="Вход в студию красоты Каре с улицы Виктора Денисова">
+        </div>
+      </div>
+    </div>
+    <div class="map-box">
+      <iframe src="https://yandex.ru/map-widget/v1/?ol=biz&oid=95985406780&z=17" title="Студия красоты Каре на карте Калининграда" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div><b>КАРЕ</b> · студия красоты</div>
+    <div>Калининград, ул. Виктора Денисова, 16 к1 · +7 (921) 262-43-08</div>
+    <div>ИНН 391406558450 · пн–сб 10:00–19:00, вс 10:00–18:00</div>
+  </div>
+<div class="footer-brand">
+    <span class="brand-made">created by</span>
+    <a class="brand-link" href="https://t.me/ALTAVALTA" target="_blank" rel="noopener">
+      <span class="sig-name"><b>A</b><b>L</b><b>T</b><b>A</b><b class="brand-core">V</b><b>A</b><b>L</b><b>T</b><b>A</b></span>
+    </a>
+  </div>
+</footer>
+<div class="sticky-bar">
+  <a class="btn btn-ghost" href="tel:+79212624308" aria-label="Позвонить в студию Каре"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.5 2.9 3.7 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+  <button class="btn btn-primary" data-open-modal>Записаться</button>
+</div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Запись в студию Каре">
+  <div class="modal-overlay" data-close-modal></div>
+  <div class="modal-box">
+    <button class="modal-close" data-close-modal aria-label="Закрыть">×</button>
+    <h3 style="font-family:var(--font-head);font-size:26px;color:var(--plum-900);margin-bottom:6px">Запись в Каре</h3>
+    <p class="form-hint" style="color:var(--muted);font-size:14.5px;margin-bottom:22px">Оставьте контакты — администратор перезвонит и подтвердит запись.</p>
+    <div class="form-wrap">
+      <form class="book-form" novalidate>
+        <div class="form-row">
+          <label for="m-name">Ваше имя</label>
+          <input id="m-name" name="name" type="text" placeholder="Например, Анна" required autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="m-phone">Телефон</label>
+          <input id="m-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+        </div>
+        <div class="form-row">
+          <label for="m-service">Услуга</label>
+          <select id="m-service" name="service" required>
+            <option value="" selected disabled>Выберите услугу</option>
+            <option>Женская стрижка</option>
+            <option>Мужская стрижка</option>
+            <option>Детская стрижка</option>
+            <option>Сложное окрашивание</option>
+            <option>Химическая завивка</option>
+            <option>Прикорневой объём</option>
+            <option>Укладка / плетение</option>
+            <option>Маникюр с гель-лаком</option>
+            <option>Педикюр</option>
+            <option>Другое / подскажу по телефону</option>
+          </select>
+        </div>
+        <div class="form-2col">
+          <div class="form-row">
+            <label for="m-date">Дата</label>
+            <input id="m-date" name="date" type="date" required>
+          </div>
+          <div class="form-row">
+            <label for="m-time">Желаемое время</label>
+            <select id="m-time" name="time" required>
+              <option value="" selected disabled>Выберите</option>
+              <option>Любое</option>
+              <option>Утро (10:00–12:00)</option>
+              <option>День (12:00–15:00)</option>
+              <option>Вечер (15:00–19:00)</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit" style="width:100%;margin-top:6px">Записаться</button>
+        <p class="form-privacy" style="margin-top:12px;font-size:12.5px;color:var(--muted);text-align:center">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var header=document.getElementById('header');
+  window.addEventListener('scroll',function(){header.classList.toggle('scrolled',window.scrollY>10);},{passive:true});
+  var modal=document.getElementById('modal');
+  var modalService=modal.querySelector('select[name="service"]');
+  function openModal(service){
+    if(service&&modalService){for(var i=0;i<modalService.options.length;i++){if(modalService.options[i].text===service){modalService.selectedIndex=i;break;}}}
+    modal.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeModal(){modal.classList.remove('open');document.body.style.overflow='';}
+  document.querySelectorAll('[data-open-modal]').forEach(function(btn){
+    btn.addEventListener('click',function(){openModal(btn.getAttribute('data-service'));});
+  });
+  document.querySelectorAll('[data-close-modal]').forEach(function(el){el.addEventListener('click',closeModal);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeModal();});
+  var today=new Date().toISOString().split('T')[0];
+  document.querySelectorAll('input[type="date"]').forEach(function(d){d.min=today;});
+  /* phone mask light */
+  document.querySelectorAll('input[type="tel"]').forEach(function(inp){
+    inp.addEventListener('input',function(e){
+      var d = e.target.value.replace(/\D/g,'');
+      if (d.length && d[0]==='8') d = '7' + d.slice(1);
+      if (d.length && d[0]!=='7') d = '7' + d;
+      d = d.slice(0,11);
+      var out = '';
+      if (d.length) out = '+' + d[0];
+      if (d.length>1) out += ' (' + d.slice(1,4);
+      if (d.length>=4) out += ') ' + d.slice(4,7);
+      if (d.length>=7) out += '-' + d.slice(7,9);
+      if (d.length>=9) out += '-' + d.slice(9,11);
+      e.target.value = out;
+    });
+  });
+  document.querySelectorAll('.book-form').forEach(function(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      if(!form.checkValidity()){form.reportValidity();return;}
+      var name = form.querySelector('input[name="name"]').value.trim();
+      var phone = form.querySelector('input[name="phone"]').value.trim();
+      var service = form.querySelector('select[name="service"]').value;
+      var date = form.querySelector('input[name="date"]').value;
+      var time = form.querySelector('select[name="time"]').value;
+      var digits = phone.replace(/\D/g,'');
+      if (name.length < 2){ alert('Пожалуйста, напишите ваше имя.'); return; }
+      if (digits.length < 10){ alert('Пожалуйста, проверьте номер телефона.'); return; }
+      var prodHosts = ['altavalta.github.io'];
+      var host = window.location.hostname || '';
+      var isLocal = (host === 'localhost' || host === '127.0.0.1' || host === '' || window.location.protocol === 'file:');
+      if (isLocal || prodHosts.indexOf(host) === -1) {
+        alert('Демо-режим: заявка не отправляется. На боевом сайте она уйдёт администратору.\n\n' + name + ', ' + phone + ' — ' + service);
+        return;
+      }
+      var payload = { name: name, phone: phone, service: service, date: date, time: time, comment: '', source: 'kare' };
+      var wrap = form.closest('.form-wrap');
+      var btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true; btn.textContent = 'Отправляем…';
+      var ctrl = new AbortController();
+      var timer = setTimeout(function(){ ctrl.abort(); }, 20000);
+      fetch('https://altavalta-leads.altavalta.workers.dev/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json', 'X-Lead-Key': 'AV-1UqZW0lEhgXpGRBjkG1TF0yn'},
+        body: JSON.stringify(payload),
+        signal: ctrl.signal
+      }).then(function(r){
+        return r.text().then(function(t){
+          try{return JSON.parse(t);}catch(err){return {ok:false,http:r.status,raw:t.slice(0,80)};}
+        });
+      }).then(function(res){
+        clearTimeout(timer);
+        if (res && res.ok){
+          wrap.innerHTML='<div class="form-success"><b>Заявка принята!</b>Мы перезвоним, чтобы подтвердить удобные дату и время.<br>Срочно? Звоните: <a href="tel:+79212624308" style="color:var(--rose-700);font-weight:700">+7 (921) 262-43-08</a></div>';
+        } else {
+          btn.disabled = false; btn.textContent = 'Записаться';
+          alert('Не удалось отправить заявку. Позвоните нам: +7 (921) 262-43-08');
+        }
+      }).catch(function(){
+        clearTimeout(timer);
+        btn.disabled = false; btn.textContent = 'Записаться';
+        alert('Не удалось отправить заявку. Позвоните нам: +7 (921) 262-43-08');
+      });
+    });
+  });
+})();
+</script>
+  <script>
+(function(){
+    var demo = document.getElementById('demoRibbon');
+    var demoBtn = document.getElementById('demoRemove');
+    if (demo && demoBtn){
+      demoBtn.addEventListener('click', function(){
+        document.body.classList.add('demo-off');
+      });
+    }
+  })();
+</script>
+</body>
+</html>
