@@ -2,967 +2,744 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>КАРЕ — студия красоты в Калининграде | Стрижки, окрашивание, маникюр</title>
-<meta name="description" content="Студия красоты КАРЕ на Виктора Денисова, 16 к1: женские, мужские и детские стрижки, сложное окрашивание, маникюр и педикюр. Женская стрижка от 800 ₽, мужская от 400 ₽. Парковка у входа.">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/prata@5/index.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/index.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Каре — студия красоты в Калининграде | Стрижки, окрашивание, маникюр</title>
+<meta name="description" content="Студия красоты Каре, Калининград, ул. Виктора Денисова, 16 к1. Женские и мужские стрижки, детские стрижки, сложные окрашивания, маникюр и педикюр. По предварительной записи. Тел. +7 (921) 262-43-08">
 <style>
-/* ============ TOKENS ============ */
 :root{
-  --paper:#f6f1e7;
-  --paper-2:#efe7d6;
-  --card:#fdfaf2;
-  --ink:#191510;
-  --ink-2:#221c14;
-  --ink-3:#4a4133;
-  --gold:#b98b4e;
-  --gold-2:#d3b175;
-  --cream:#efe7d8;
-  --line:rgba(25,21,16,.14);
-  --line-gold:rgba(211,177,117,.45);
-  --shadow:0 24px 60px -24px rgba(25,21,16,.28);
-  --ease:cubic-bezier(.16,1,.3,1);
-  --header-h:76px;
+  --bg:#faf5f0;
+  --bg2:#f4e9e0;
+  --pink:#e6c3ba;
+  --pink-soft:#f0d9d2;
+  --rose:#c2867b;
+  --ink:#35251f;
+  --ink-soft:#6f584e;
+  --dark:#2d1f1a;
+  --dark2:#3e2c25;
+  --line:#e7d7cc;
+  --white:#ffffff;
+  --cream:#f7ede6;
+  --shadow:0 14px 40px rgba(53,37,31,.10);
+  --radius:20px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-padding-top:calc(var(--header-h) + 16px)}
-@media (prefers-reduced-motion: no-preference){
-  html{scroll-behavior:smooth}
-}
+html{scroll-behavior:smooth}
+html,body{overflow-x:hidden}
 body{
-  font-family:"Manrope","Segoe UI",sans-serif;
-  background:var(--paper);
+  font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);
   color:var(--ink);
+  font-size:16px;
   line-height:1.6;
-  -webkit-font-smoothing:antialiased;
+  -webkit-font-size-adjust:none;
 }
-img{display:block;max-width:100%;height:auto}
+img{display:block;max-width:100%;height:100%;width:100%;object-fit:cover}
 a{color:inherit;text-decoration:none}
-ul{list-style:none}
-button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit}
-h1,h2,h3,.serif{font-family:"Prata",Georgia,serif;font-weight:400;line-height:1.12;letter-spacing:.01em}
-.container{width:100%;max-width:1220px;margin-inline:auto;padding-inline:clamp(18px,4vw,32px)}
-section{position:relative}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
-
-/* noise film */
-.noise{position:fixed;inset:0;z-index:120;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
-
-/* ============ BUTTONS / EYEBROW ============ */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 28px;
-  font-weight:600;font-size:15px;letter-spacing:.02em;border-radius:2px;transition:transform .35s var(--ease),background .3s,box-shadow .3s,color .3s;white-space:nowrap}
-.btn svg{width:18px;height:18px;flex:none}
-.btn-gold{background:var(--gold);color:#14100a;box-shadow:0 14px 30px -14px rgba(185,139,78,.75)}
-.btn-gold:hover{background:var(--gold-2);transform:translateY(-2px)}
-.btn-dark{background:var(--ink);color:var(--cream)}
-.btn-dark:hover{background:#31281b;transform:translateY(-2px)}
-.btn-ghost-light{border:1px solid rgba(239,231,216,.55);color:var(--cream)}
-.btn-ghost-light:hover{border-color:var(--gold-2);color:var(--gold-2);transform:translateY(-2px)}
-.btn-ghost{border:1px solid var(--line);color:var(--ink)}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
-.btn-sm{min-height:44px;padding:0 20px;font-size:13px}
-.btn-block{width:100%}
-.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:11px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
-.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
-.eyebrow-light{color:var(--gold-2)}
-.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:clamp(30px,5vw,56px)}
-.sec-head h2{font-size:clamp(30px,4.4vw,52px);max-width:640px}
-.sec-pad{padding-block:clamp(70px,9vw,124px)}
-
-/* reveal */
-[data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
-[data-reveal].is-in{opacity:1;transform:none}
-
-/* frame */
-.frame{position:relative}
-.frame::after{content:"";position:absolute;inset:12px;border:1px solid var(--line-gold);pointer-events:none;z-index:2}
-.frame img{width:100%;object-fit:cover}
-figcaption{margin-top:12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
-
-/* ============ HEADER ============ */
-.site-header{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .4s,box-shadow .4s,border-color .4s;border-bottom:1px solid transparent}
-.site-header.scrolled{background:rgba(246,241,231,.92);backdrop-filter:blur(12px);border-bottom-color:var(--line)}
-.header-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:var(--header-h)}
-.brand{display:flex;flex-direction:column;line-height:1;gap:3px}
-.brand-name{font-family:"Prata",serif;font-size:24px;letter-spacing:.16em;color:var(--cream);transition:color .4s}
-.brand-sub{font-size:9px;font-weight:700;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-2)}
-.site-header.scrolled .brand-name{color:var(--ink)}
-.nav-desktop{display:flex;gap:30px}
-.nav-desktop a{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cream);opacity:.85;position:relative;padding:8px 0;transition:color .4s,opacity .3s}
-.site-header.scrolled .nav-desktop a{color:var(--ink)}
-.nav-desktop a::after{content:"";position:absolute;left:0;bottom:2px;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
-.nav-desktop a:hover::after{transform:scaleX(1);transform-origin:left}
-.nav-desktop a:hover{opacity:1;color:var(--gold-2)}
-.site-header.scrolled .nav-desktop a:hover{color:var(--gold)}
-.header-right{display:flex;align-items:center;gap:14px}
-.header-phone{font-weight:700;font-size:14px;letter-spacing:.02em;color:var(--cream);transition:color .4s;min-height:44px;display:inline-flex;align-items:center}
-.site-header.scrolled .header-phone{color:var(--ink)}
-.header-phone:hover{color:var(--gold-2)}
-.burger{display:none;width:46px;height:46px;position:relative;z-index:70}
-.burger span{position:absolute;left:11px;right:11px;height:2px;background:var(--cream);transition:transform .4s var(--ease),top .4s,background .4s}
-.site-header.scrolled .burger span,.m-open .burger span{background:var(--ink)}
-.burger span:nth-child(1){top:18px}
-.burger span:nth-child(2){top:26px}
-.m-open .burger span:nth-child(1){top:22px;transform:rotate(45deg)}
-.m-open .burger span:nth-child(2){top:22px;transform:rotate(-45deg)}
-.m-menu{position:fixed;inset:0;z-index:55;background:var(--paper);padding:calc(var(--header-h) + 24px) 28px 40px;display:flex;flex-direction:column;justify-content:space-between;transform:translateY(-102%);transition:transform .6s var(--ease);visibility:hidden}
-.m-open .m-menu{transform:none;visibility:visible}
-.m-menu nav{display:flex;flex-direction:column}
-.m-menu nav a{font-family:"Prata",serif;font-size:clamp(28px,7vw,40px);padding:12px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
-.m-menu nav a small{font-family:"Manrope",sans-serif;font-size:11px;letter-spacing:.24em;color:var(--gold);font-weight:700}
-.m-menu-foot{display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--ink-3)}
-.m-menu-foot a{font-size:20px;font-weight:700;color:var(--ink)}
-
-/* ============ HERO ============ */
-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;color:var(--cream)}
-.hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;animation:kburns 26s ease-in-out infinite alternate;transform-origin:60% 40%}
-@keyframes kburns{from{transform:scale(1.03)}to{transform:scale(1.15)}}
-.hero-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(78deg,rgba(17,13,8,.92) 0%,rgba(17,13,8,.72) 42%,rgba(17,13,8,.30) 78%,rgba(17,13,8,.55) 100%),linear-gradient(to top,rgba(15,11,7,.85),transparent 45%)}
-.hero-in{position:relative;z-index:2;padding-top:calc(var(--header-h) + 40px);padding-bottom:clamp(40px,6vh,70px)}
-.hero-title{font-size:clamp(38px,8.4vw,88px);margin:22px 0 22px;color:var(--cream)}
-.hero-title em{font-style:normal;color:var(--gold-2)}
-.hl{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
-.hl>span{display:block;transform:translateY(115%);animation:rise 1.15s var(--ease) forwards;animation-delay:var(--d,0s)}
-@keyframes rise{to{transform:none}}
-.hero-sub{max-width:560px;font-size:clamp(15px,1.6vw,18px);color:rgba(239,231,216,.86);margin-bottom:32px;font-weight:500}
-.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
-.hero-facts{display:flex;flex-wrap:wrap;gap:12px 28px}
-.hero-facts li{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(239,231,216,.92)}
-.hero-facts svg{width:16px;height:16px;color:var(--gold-2)}
-.hero-scroll{position:absolute;right:clamp(16px,3vw,36px);bottom:26px;z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:rgba(239,231,216,.6)}
-.hero-scroll i{width:1px;height:52px;background:linear-gradient(var(--gold-2),transparent);display:block;animation:drip 2.2s ease-in-out infinite}
-@keyframes drip{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-
-/* ============ TICKER ============ */
-.ticker{background:var(--ink);border-block:1px solid rgba(211,177,117,.28);overflow:hidden;padding:16px 0}
-.ticker-track{display:flex;width:max-content;animation:tick 30s linear infinite}
-.ticker:hover .ticker-track{animation-play-state:paused}
-@keyframes tick{to{transform:translateX(-50%)}}
-.ticker-list{display:flex;align-items:center}
-.ticker-list span{display:inline-flex;align-items:center;gap:26px;padding-right:26px;font-family:"Prata",serif;font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-2);white-space:nowrap}
-.ticker-list svg{width:9px;height:9px;color:var(--gold)}
-
-/* ============ ABOUT ============ */
-.about-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(36px,6vw,90px);align-items:start}
-.about-left{position:sticky;top:calc(var(--header-h) + 28px)}
-.about-left h2{font-size:clamp(30px,4.4vw,50px);margin:18px 0 22px}
-.about-left p{color:var(--ink-3);margin-bottom:16px;max-width:520px}
-.about-points{margin:26px 0 30px;display:flex;flex-direction:column;gap:14px}
-.about-points li{display:flex;gap:14px;align-items:flex-start;font-weight:600;font-size:15px}
-.about-points svg{width:20px;height:20px;color:var(--gold);flex:none;margin-top:2px}
-.about-stats{display:flex;gap:0;border-block:1px solid var(--line)}
-.about-stats li{flex:1;padding:18px 14px 16px;border-left:1px solid var(--line)}
-.about-stats li:first-child{border-left:none;padding-left:0}
-.about-stats b{display:block;font-family:"Prata",serif;font-weight:400;font-size:clamp(22px,2.6vw,30px);color:var(--ink)}
-.about-stats span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
-.about-right{display:flex;flex-direction:column;gap:clamp(28px,4vw,44px)}
-.about-right .frame img{aspect-ratio:4/5}
-.about-right .frame.wide img{aspect-ratio:16/11}
-.frame-hover{overflow:hidden}
-.frame-hover img{transition:transform 1.4s var(--ease)}
-.frame-hover:hover img{transform:scale(1.05)}
-
-/* ============ SERVICES ============ */
-.services{background:var(--ink);color:var(--cream)}
-.services .eyebrow{color:var(--gold-2)}
-.services-head-note{max-width:340px;font-size:14px;color:rgba(239,231,216,.65)}
-.srv-list{border-top:1px solid rgba(239,231,216,.16)}
-.srv-row{display:grid;grid-template-columns:70px 1fr auto 56px;gap:20px;align-items:center;padding:26px 8px;border-bottom:1px solid rgba(239,231,216,.16);position:relative;transition:padding .4s var(--ease)}
-.srv-row::before{content:"";position:absolute;inset:0;background:rgba(211,177,117,.07);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease);z-index:0}
-.srv-row:hover::before{transform:scaleX(1)}
-.srv-row>*{position:relative;z-index:1}
-.srv-num{font-family:"Prata",serif;font-size:15px;color:var(--gold);letter-spacing:.06em}
-.srv-name{font-family:"Prata",serif;font-size:clamp(19px,2.6vw,28px);color:var(--cream);transition:color .3s}
-.srv-row:hover .srv-name{color:var(--gold-2)}
-.srv-desc{font-size:13.5px;color:rgba(239,231,216,.6);margin-top:5px;max-width:560px}
-.srv-price{font-weight:700;font-size:clamp(15px,1.8vw,19px);letter-spacing:.02em;white-space:nowrap;text-align:right}
-.srv-price small{display:block;font-weight:600;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-2);margin-top:3px}
-.srv-price.ask{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(239,231,216,.75)}
-.srv-arrow{width:44px;height:44px;border:1px solid rgba(239,231,216,.3);border-radius:50%;display:grid;place-items:center;transition:all .4s var(--ease)}
-.srv-arrow svg{width:17px;height:17px}
-.srv-row:hover .srv-arrow{background:var(--gold);border-color:var(--gold);color:#14100a;transform:rotate(-45deg)}
-.srv-note{margin-top:22px;font-size:12.5px;color:rgba(239,231,216,.5);display:flex;gap:10px;align-items:center}
-.srv-note svg{width:14px;height:14px;color:var(--gold-2);flex:none}
-
-/* ============ RAILS (works / reviews) ============ */
-.rail-wrap{width:calc(100% + 2*clamp(18px,4vw,32px));margin-left:calc(-1*clamp(18px,4vw,32px));padding-inline:clamp(18px,4vw,32px)}
-.rail{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:14px;cursor:grab;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
-.rail:active{cursor:grabbing}
-.rail::-webkit-scrollbar{height:4px}
-.rail::-webkit-scrollbar-track{background:var(--line)}
-.rail::-webkit-scrollbar-thumb{background:var(--gold)}
-.work-card{flex:none;width:min(76vw,370px);scroll-snap-align:start;position:relative;overflow:hidden;background:var(--ink)}
-.work-card img{aspect-ratio:3/4;width:100%;object-fit:cover;transition:transform 1.3s var(--ease),opacity .6s}
-.work-card:hover img{transform:scale(1.07)}
-.work-cap{position:absolute;left:0;right:0;bottom:0;padding:44px 20px 18px;background:linear-gradient(to top,rgba(15,11,7,.88),transparent);color:var(--cream);display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
-.work-cap b{font-family:"Prata",serif;font-weight:400;font-size:17px;display:block}
-.work-cap span{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-2)}
-.rail-hint{margin-top:16px;display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3)}
-.rail-hint svg{width:26px;height:14px;color:var(--gold)}
-
-/* ============ MASTERS ============ */
-.masters{background:var(--paper-2)}
-.masters-photo{margin-bottom:clamp(36px,5vw,60px)}
-.masters-photo .frame img{aspect-ratio:16/9;width:100%}
-.masters-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,3vw,36px)}
-.master-card{background:var(--card);border:1px solid var(--line);padding:clamp(26px,3.4vw,44px);position:relative;transition:transform .5s var(--ease),box-shadow .5s}
-.master-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.master-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-2))}
-.master-top{display:flex;align-items:center;gap:18px;margin-bottom:20px}
-.monogram{width:74px;height:74px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-family:"Prata",serif;font-size:30px;color:var(--gold);background:radial-gradient(circle at 32% 28%,rgba(211,177,117,.18),transparent 65%);flex:none}
-.master-top h3{font-size:clamp(22px,2.6vw,28px)}
-.master-top small{display:block;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-top:6px}
-.master-card p{color:var(--ink-3);font-size:15px}
-.master-quote{margin-top:20px;padding:16px 18px;border-left:2px solid var(--gold);background:rgba(211,177,117,.09);font-style:italic;font-size:14px;color:var(--ink-2)}
-.master-quote cite{display:block;font-style:normal;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:8px;font-weight:700}
-
-/* ============ REVIEWS ============ */
-.reviews{background:var(--ink-2);color:var(--cream)}
-.reviews .eyebrow{color:var(--gold-2)}
-.rating-chips{display:flex;flex-wrap:wrap;gap:12px}
-.rating-chip{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(211,177,117,.4);padding:10px 16px;font-size:13px;font-weight:600}
-.rating-chip svg{width:15px;height:15px;color:var(--gold-2)}
-.rating-chip b{font-family:"Prata",serif;font-size:17px;font-weight:400;color:var(--gold-2)}
-.reviews .sec-head{align-items:center}
-.rail-nav{display:flex;gap:10px}
-.rail-btn{width:50px;height:50px;border:1px solid rgba(239,231,216,.35);border-radius:50%;display:grid;place-items:center;color:var(--cream);transition:all .35s var(--ease)}
-.rail-btn:hover{background:var(--gold);border-color:var(--gold);color:#14100a}
-.rail-btn svg{width:18px;height:18px}
-.rev-card{flex:none;width:min(84vw,400px);scroll-snap-align:start;background:rgba(246,241,231,.045);border:1px solid rgba(239,231,216,.14);padding:30px 28px;display:flex;flex-direction:column;gap:18px;transition:border-color .4s,background .4s}
-.rev-card:hover{border-color:rgba(211,177,117,.55);background:rgba(246,241,231,.07)}
-.rev-quote{width:30px;height:24px;color:var(--gold)}
-.rev-text{font-size:15px;line-height:1.7;color:rgba(239,231,216,.9);flex:1}
-.rev-foot{border-top:1px solid rgba(239,231,216,.14);padding-top:16px;display:flex;justify-content:space-between;gap:12px;align-items:flex-end}
-.rev-name{font-weight:700;font-size:14px}
-.rev-date{font-size:12px;color:rgba(239,231,216,.55);margin-top:2px}
-.rev-src{font-size:9.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);border:1px solid rgba(211,177,117,.4);padding:5px 9px;white-space:nowrap}
-
-/* ============ BOOKING ============ */
-.booking-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(36px,6vw,80px);align-items:start}
-.booking-left h2{font-size:clamp(30px,4.2vw,48px);margin:18px 0 20px}
-.booking-left p{color:var(--ink-3);max-width:480px;margin-bottom:30px}
-.big-phone{display:inline-flex;align-items:center;gap:16px;font-family:"Prata",serif;font-size:clamp(26px,3.6vw,42px);color:var(--ink);margin-bottom:8px;transition:color .3s}
-.big-phone:hover{color:var(--gold)}
-.big-phone .ph-circle{width:58px;height:58px;border-radius:50%;background:var(--gold);color:#14100a;display:grid;place-items:center;flex:none;box-shadow:0 12px 26px -12px rgba(185,139,78,.8)}
-.big-phone svg{width:22px;height:22px}
-.booking-note{font-size:13px;color:var(--ink-3);margin-bottom:26px}
-.booking-hours{display:flex;gap:32px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
-.booking-hours b{font-family:"Prata",serif;font-weight:400;font-size:19px;display:block}
-.booking-hours span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
-.form-card{background:var(--card);border:1px solid var(--line);padding:clamp(26px,3.4vw,44px);box-shadow:var(--shadow);position:relative}
-.form-card::before{content:"";position:absolute;inset:10px;border:1px solid var(--line-gold);pointer-events:none}
-.form-card h3{font-size:24px;margin-bottom:6px}
-.form-card>p{font-size:13.5px;color:var(--ink-3);margin-bottom:24px}
-.field{margin-bottom:16px;position:relative;z-index:1}
-.field label{display:block;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-bottom:7px}
-.field input,.field select{width:100%;height:52px;border:1px solid var(--line);background:#fff;padding:0 16px;font-family:inherit;font-size:15px;color:var(--ink);border-radius:2px;transition:border-color .3s,box-shadow .3s;appearance:none}
-.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23b98b4e' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
-.field input:focus,.field select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(185,139,78,.18)}
-.field.err input{border-color:#b0452f;box-shadow:0 0 0 3px rgba(176,69,47,.14)}
-.form-done{display:none;text-align:center;padding:26px 0 10px;position:relative;z-index:1}
-.form-done .ok-ring{width:76px;height:76px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;margin:0 auto 18px;color:var(--gold)}
-.form-done .ok-ring svg{width:32px;height:32px}
-.form-done h3{margin-bottom:8px}
-.form-done p{font-size:14px;color:var(--ink-3)}
-.form-wrap.sent form{display:none}
-.form-wrap.sent .form-done{display:block}
-
-/* ============ CONTACTS ============ */
-.contacts{background:var(--paper-2)}
-.contacts-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,5vw,70px);align-items:start}
-.c-item{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
-.c-item:first-child{padding-top:0}
-.c-ico{width:52px;height:52px;flex:none;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold)}
-.c-ico svg{width:22px;height:22px}
-.c-item small{display:block;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px}
-.c-item b{font-weight:600;font-size:16px}
-.c-item span{display:block;font-size:13.5px;color:var(--ink-3);margin-top:2px}
-.c-item a:hover{color:var(--gold)}
-.parking-flag{display:flex;gap:14px;align-items:flex-start;background:var(--ink);color:var(--cream);padding:20px 22px;margin-top:24px}
-.parking-flag .c-ico{border-color:var(--gold-2);color:var(--gold-2)}
-.parking-flag b{color:var(--gold-2);font-size:15px}
-.parking-flag p{font-size:13.5px;color:rgba(239,231,216,.8);margin-top:3px}
-.contacts-map-link{margin-top:26px;display:flex}
-.contacts-photos{display:grid;gap:22px}
-.contacts-photos .frame img{width:100%}
-.contacts-photos .ph-a img{aspect-ratio:16/10}
-.contacts-photos .ph-b img{aspect-ratio:16/8}
-
-/* ============ FOOTER ============ */
-.footer{background:var(--ink);color:rgba(239,231,216,.75);padding:clamp(52px,7vw,80px) 0 0}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;padding-bottom:44px}
-.footer .brand-name{color:var(--cream);font-size:30px}
-.footer-about{margin-top:16px;font-size:14px;max-width:340px;color:rgba(239,231,216,.55)}
-.footer h4{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-2);margin-bottom:18px}
-.footer nav a,.footer li{display:block;font-size:14px;padding:6px 0;color:rgba(239,231,216,.72)}
-.footer nav a:hover{color:var(--gold-2)}
-.footer-bottom{border-top:1px solid rgba(239,231,216,.14);padding:20px 0;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;font-size:12px;color:rgba(239,231,216,.42)}
-
-/* ============ CALL BAR (mobile) ============ */
-.callbar{position:fixed;left:0;right:0;bottom:0;z-index:48;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(25,21,16,.94);backdrop-filter:blur(10px);border-top:1px solid rgba(211,177,117,.35)}
-.callbar .btn{flex:1;min-height:48px;font-size:14px}
-
-/* ============ RESPONSIVE ============ */
-@media (max-width:1080px){
-  .nav-desktop{display:none}
-  .burger{display:block}
-  .about-grid,.booking-grid,.contacts-grid{grid-template-columns:1fr}
-  .about-left{position:static}
-  .footer-grid{grid-template-columns:1fr 1fr}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+@media (max-width:640px){.wrap{padding:0 16px}}
+h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:600;line-height:1.15}
+.icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.icon-fill{width:18px;height:18px;fill:currentColor;stroke:none;flex:none}
+.photo-cap{text-align:center;font-size:13px;color:var(--ink-soft);margin-top:10px;line-height:1.45}
+.overline{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);font-weight:700}
+.overline::before{content:"";width:28px;height:1px;background:var(--rose)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:52px;padding:0 26px;border-radius:14px;
+  font-size:16px;font-weight:600;letter-spacing:.02em;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  width:auto;text-align:center;
 }
-@media (max-width:940px){
-  .header-phone{display:none}
-  .callbar{display:flex}
-  body{padding-bottom:78px}
+.btn-primary{background:var(--dark);color:var(--cream);box-shadow:0 10px 24px rgba(45,31,26,.22)}
+.btn-primary:hover{background:var(--dark2);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(53,37,31,.28);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+.btn-light{background:var(--cream);color:var(--dark)}
+.btn-light:hover{transform:translateY(-2px)}
+@media (max-width:640px){.btn{width:100%}}
+/* header */
+.header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(250,245,240,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
 }
-@media (max-width:720px){
-  .srv-row{grid-template-columns:44px 1fr 44px;grid-template-areas:"num body arrow" ". price arrow";row-gap:8px}
-  .srv-num{grid-area:num}
-  .srv-body{grid-area:body}
-  .srv-price{grid-area:price;text-align:left}
-  .srv-arrow{grid-area:arrow}
-  .masters-grid{grid-template-columns:1fr}
-  .hero-scroll{display:none}
-  .footer-grid{grid-template-columns:1fr}
-  .about-stats{flex-direction:column}
-  .about-stats li{border-left:none;border-top:1px solid var(--line);padding:14px 0}
-  .about-stats li:first-child{border-top:none;padding-top:0}
-  .booking-hours{flex-wrap:wrap;gap:18px 28px}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:68px}
+.logo{display:flex;flex-direction:column;line-height:1.1}
+.logo b{font-family:Georgia,serif;font-size:26px;letter-spacing:.34em;font-weight:600}
+.logo span{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft)}
+.header-right{display:flex;align-items:center;gap:10px}
+.header-tel{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;padding:10px 6px}
+.header-tel .icon{width:18px;height:18px;color:var(--rose)}
+.header .btn{min-height:46px;padding:0 20px}
+@media (max-width:560px){.header-tel span{display:none}.header-tel{padding:10px}}
+/* hero */
+.hero{padding:52px 0 56px;position:relative}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 340px at 85% 0%, var(--pink-soft), transparent 70%);pointer-events:none}
+.hero-grid{display:grid;gap:36px;position:relative}
+@media (min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;align-items:center}}
+.hero h1{font-size:clamp(30px,7.4vw,54px);margin:18px 0 16px;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero-sub{font-size:clamp(15px,2.6vw,18px);color:var(--ink-soft);max-width:52ch}
+.rating-pill{
+  display:inline-flex;align-items:center;gap:12px;margin-top:22px;
+  background:var(--white);border:1px solid var(--line);border-radius:999px;
+  padding:10px 18px 10px 14px;box-shadow:var(--shadow);
 }
-/* ============ REDUCED MOTION ============ */
-@media (prefers-reduced-motion: reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  [data-reveal]{opacity:1;transform:none}
-  .hl>span{transform:none}
-  .rail{cursor:auto}
+.rating-pill .num{font-family:Georgia,serif;font-size:22px;font-weight:700}
+.rating-pill .txt{font-size:12px;color:var(--ink-soft);line-height:1.35}
+.stars{position:relative;display:inline-flex;gap:2px;color:#d9c6bb}
+.stars .fill{position:absolute;inset:0;overflow:hidden;display:inline-flex;gap:2px;color:#d9a13c;width:var(--v,88%)}
+.stars .icon-fill{width:16px;height:16px}
+.hero-cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.hero-facts{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;font-size:14px;color:var(--ink-soft)}
+.hero-facts div{display:flex;align-items:center;gap:8px}
+.hero-facts .icon{width:18px;height:18px;color:var(--rose)}
+.hero-photo{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
+.hero-photo .frame{aspect-ratio:4/3}
+/* marquee */
+.marquee{background:var(--dark);color:var(--cream);overflow:hidden;padding:14px 0}
+.marquee-track{display:flex;gap:34px;width:max-content;animation:mq 30s linear infinite;align-items:center}
+.marquee span{font-size:13px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+.marquee .icon-fill{width:10px;height:10px;color:var(--pink)}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:64px 0}
+@media (max-width:640px){section{padding:46px 0}}
+.sec-head{max-width:640px;margin-bottom:34px}
+.sec-head h2{font-size:clamp(26px,5.4vw,40px);margin:14px 0 12px}
+.sec-head p{color:var(--ink-soft)}
+/* works */
+.works{background:var(--bg2)}
+.works-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media (min-width:980px){.works-grid{grid-template-columns:repeat(4,1fr);gap:18px}}
+.work-card{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 18px rgba(53,37,31,.06)}
+.work-card .frame{aspect-ratio:3/4;overflow:hidden}
+.work-card .frame img{transition:transform .6s ease}
+.work-card:hover .frame img{transform:scale(1.04)}
+.work-body{padding:14px 14px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.work-body p{font-size:13.5px;color:var(--ink-soft);flex:1}
+.work-btn{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--rose);padding:6px 0;min-height:44px}
+.work-btn .icon{width:16px;height:16px;transition:transform .2s}
+.work-btn:hover .icon{transform:translateX(4px)}
+/* prices */
+.price-grid{display:grid;gap:18px}
+@media (min-width:768px){.price-grid{grid-template-columns:1fr 1fr}}
+.price-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;box-shadow:0 6px 18px rgba(53,37,31,.06)}
+.price-card h3{font-size:22px;display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.price-card h3 .icon{color:var(--rose)}
+.price-row{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:15.5px}
+.price-row:last-of-type{border-bottom:none}
+.price-row b{font-weight:700;white-space:nowrap}
+.price-note{display:flex;gap:10px;align-items:flex-start;background:var(--pink-soft);border-radius:12px;padding:14px 16px;margin-top:14px;font-size:13.5px;color:var(--ink)}
+.price-note .icon{width:18px;height:18px;color:var(--rose);margin-top:2px}
+.price-cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+/* why */
+.why{background:var(--dark);color:var(--cream)}
+.why .overline{color:var(--pink)}
+.why .overline::before{background:var(--pink)}
+.why .sec-head p{color:#cbb4a9}
+.why-grid{display:grid;gap:14px}
+@media (min-width:640px){.why-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1024px){.why-grid{grid-template-columns:1fr 1fr 1fr}}
+.why-card{border:1px solid rgba(247,237,230,.14);border-radius:16px;padding:22px;background:rgba(247,237,230,.04)}
+.why-card .icon{width:26px;height:26px;color:var(--pink);margin-bottom:14px}
+.why-card h3{font-size:18px;margin-bottom:8px}
+.why-card p{font-size:14px;color:#cbb4a9}
+.why-photo{margin-top:26px;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(247,237,230,.16)}
+.why-photo .frame{aspect-ratio:16/9}
+@media (max-width:640px){.why-photo .frame{aspect-ratio:4/3}}
+.why .photo-cap{color:#cbb4a9}
+/* masters */
+.masters-grid{display:grid;gap:18px}
+@media (min-width:768px){.masters-grid{grid-template-columns:1fr 1fr}}
+.master-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:0 6px 18px rgba(53,37,31,.06);position:relative;overflow:hidden}
+.master-card::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:var(--pink-soft)}
+.master-card .icon{width:30px;height:30px;color:var(--rose);margin-bottom:14px;position:relative;z-index:1}
+.master-card h3{font-size:24px;margin-bottom:6px;position:relative;z-index:1}
+.master-card .role{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);font-weight:700;margin-bottom:12px;position:relative;z-index:1}
+.master-card p{font-size:14.5px;color:var(--ink-soft);position:relative;z-index:1}
+/* reviews */
+.reviews{background:var(--bg2)}
+.reviews-grid{display:grid;gap:16px}
+@media (min-width:768px){.reviews-grid{grid-template-columns:1fr 1fr}}
+.review-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 6px 18px rgba(53,37,31,.06);display:flex;flex-direction:column;gap:14px}
+.review-card .icon-fill{width:26px;height:26px;color:var(--pink)}
+.review-card p{font-size:14.5px;color:var(--ink);flex:1}
+.review-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px}
+.review-meta b{font-size:14.5px}
+.review-meta span{color:var(--ink-soft);white-space:nowrap}
+.reviews-total{display:flex;align-items:center;gap:14px;margin-bottom:30px;flex-wrap:wrap}
+.reviews-total .badge{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 18px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow)}
+.reviews-total .num{font-family:Georgia,serif;font-size:26px;font-weight:700}
+.reviews-total .txt{font-size:12.5px;color:var(--ink-soft);line-height:1.35}
+/* contacts */
+.contacts-grid{display:grid;gap:26px}
+@media (min-width:900px){.contacts-grid{grid-template-columns:.9fr 1.1fr;align-items:start}}
+.contact-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:0 6px 18px rgba(53,37,31,.06)}
+.contact-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
+.contact-row:last-of-type{border-bottom:none}
+.contact-row .icon{width:22px;height:22px;color:var(--rose);margin-top:2px}
+.contact-row .lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px}
+.contact-row .val{font-weight:700;font-size:16px}
+.contact-row .val small{display:block;font-weight:400;font-size:13px;color:var(--ink-soft)}
+.contact-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.contacts-photos{display:grid;gap:18px;grid-template-columns:1fr}
+@media (min-width:640px) and (max-width:899px){.contacts-photos{grid-template-columns:1fr 1.4fr;align-items:start}}
+.contacts-photos .frame-a{aspect-ratio:3/4;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);max-width:340px}
+.contacts-photos .frame-b{aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+@media (min-width:640px) and (max-width:899px){.contacts-photos .frame-a{max-width:none}}
+/* cta band */
+.cta-band{background:var(--pink);color:var(--dark);position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 260px at 15% 20%, rgba(255,255,255,.5), transparent 70%)}
+.cta-in{position:relative;display:flex;flex-direction:column;gap:20px;align-items:flex-start;max-width:640px;margin:0 auto;text-align:left}
+.cta-in h2{font-size:clamp(26px,5.6vw,40px)}
+.cta-in p{font-size:16px;color:var(--dark2)}
+.cta-in .btns{display:flex;gap:12px;flex-wrap:wrap}
+/* footer */
+.footer{padding:30px 0 34px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-soft)}
+.footer-in{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+/* sticky bar */
+.stickybar{display:none}
+@media (max-width:767px){
+  body{padding-bottom:86px}
+  .stickybar{
+    position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));
+    z-index:70;display:flex;gap:10px;
+    background:var(--dark);border-radius:18px;padding:10px;
+    box-shadow:0 16px 40px rgba(45,31,26,.4);
+  }
+  .stickybar .call{width:52px;height:52px;border-radius:14px;border:1.5px solid rgba(247,237,230,.35);color:var(--cream);display:flex;align-items:center;justify-content:center;flex:none}
+  .stickybar .btn{flex:1;min-height:52px}
 }
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}
+.modal-overlay{position:absolute;inset:0;background:rgba(45,31,26,.55);backdrop-filter:blur(3px)}
+.modal-box{position:relative;background:var(--white);border-radius:22px;max-width:480px;width:100%;max-height:92vh;overflow:auto;padding:28px 24px;box-shadow:0 30px 80px rgba(45,31,26,.35)}
+.modal-close{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);background:var(--bg2)}
+.modal-close:hover{color:var(--ink)}
+.modal-box h3{font-size:26px;margin:6px 0 6px}
+.modal-box .m-sub{font-size:14px;color:var(--ink-soft);margin-bottom:18px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px;font-weight:700}
+.field input,.field select{
+  width:100%;min-height:50px;border:1.5px solid var(--line);border-radius:12px;
+  padding:0 14px;font-size:16px;background:var(--bg);color:var(--ink);
+  font-family:inherit;outline:none;transition:border-color .2s;
+}
+.field input:focus,.field select:focus{border-color:var(--rose)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:380px){.field-row{grid-template-columns:1fr}}
+.modal .btn{width:100%;margin-top:6px}
+.modal-note{font-size:12px;color:var(--ink-soft);margin-top:12px;text-align:center}
+.form-success{display:none;text-align:center;padding:26px 6px}
+.form-success .icon{width:44px;height:44px;color:var(--rose);margin:0 auto 16px}
+.form-success h4{font-family:Georgia,serif;font-size:24px;margin-bottom:10px}
+.form-success p{font-size:14.5px;color:var(--ink-soft)}
+.modal-box.sent form{display:none}
+.modal-box.sent .form-success{display:block}
 </style>
 </head>
-<body id="top">
-<div class="noise" aria-hidden="true"></div>
+<body>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header" id="siteHeader">
-  <div class="container header-in">
-    <a class="brand" href="#top" aria-label="КАРЕ — на главную">
-      <span class="brand-name">КАРЕ</span>
-      <span class="brand-sub">Студия красоты</span>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/><path d="M20 4 8.3 15.7M14.8 14.6 20 20M8.3 8.3 12 12"/></symbol>
+<symbol id="i-comb" viewBox="0 0 24 24"><path d="M4.5 4.5h15v4.5h-15z"/><path d="M6.5 9v10.5M9.8 9v7.5M13.1 9v10.5M16.4 9v7.5M19 9v10.5"/></symbol>
+<symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 4l1.8 4.9 4.9 1.8-4.9 1.8L11 17.4l-1.8-4.9-4.9-1.8 4.9-1.8z"/><path d="M18.6 14.6l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M21.5 16.9v2.6a1.9 1.9 0 0 1-2.1 1.9 19 19 0 0 1-8.3-3 18.7 18.7 0 0 1-5.7-5.7 19 19 0 0 1-3-8.4A1.9 1.9 0 0 1 4.3 2.3h2.6a1.9 1.9 0 0 1 1.9 1.6c.1 1 .4 1.9.7 2.8a1.9 1.9 0 0 1-.4 2L8 9.8a15.2 15.2 0 0 0 5.7 5.7l1.1-1.1a1.9 1.9 0 0 1 2-.4c.9.3 1.9.6 2.8.7a1.9 1.9 0 0 1 1.9 2.2z"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 7.4v4.6l3 1.8"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.4S4.6 15.6 4.6 10.2a7.4 7.4 0 0 1 14.8 0c0 5.4-7.4 11.2-7.4 11.2z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.5.7-4.8 4.4 1.3 6.4-5.8-3.3-5.8 3.3 1.3-6.4L2.7 9.4l6.5-.7z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6.5 9.4 17 4 11.6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 2.8V6.6M16 2.8V6.6"/></symbol>
+<symbol id="i-park" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9.6 16.6V7.4h3.5a2.8 2.8 0 0 1 0 5.6H9.6"/></symbol>
+<symbol id="i-wifi" viewBox="0 0 24 24"><path d="M4 10.4a12.3 12.3 0 0 1 16 0M7 14a8 8 0 0 1 10 0M10 17.4a3.6 3.6 0 0 1 4 0"/><circle cx="12" cy="20" r="1.1"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 8.6a4.8 4.8 0 0 0-8.8-2.7A4.8 4.8 0 0 0 3.2 8.6c0 5 8.8 10.6 8.8 10.6s8.8-5.6 8.8-10.6z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.6v2.4M12 19v2.4M2.6 12H5M19 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="9.2" cy="8" r="3.4"/><path d="M3.6 20c.6-3.6 2.8-5.6 5.6-5.6s5 2 5.6 5.6"/><circle cx="17.2" cy="9.2" r="2.6"/><path d="M15.8 14.8c2.3.3 4 2 4.6 4.7"/></symbol>
+<symbol id="i-quote" viewBox="0 0 24 24"><path d="M9.8 7.2c0 4.4-2.1 7-5.8 8.6l-.9-1.5c2.1-1.1 3.2-2.4 3.4-3.9H3.3V4.9h6.5zM20.7 7.2c0 4.4-2.1 7-5.8 8.6l-.9-1.5c2.1-1.1 3.2-2.4 3.4-3.9h-3.2V4.9h6.5z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-diamond" viewBox="0 0 24 24"><path d="M12 5.5 17.5 12 12 18.5 6.5 12z"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13.5" rx="2.5"/><path d="M3 10h18M6.5 15h4"/></symbol>
+</svg>
+
+<header class="header">
+  <div class="wrap header-in">
+    <a class="logo" href="#top" aria-label="Каре — студия красоты">
+      <b>КАРЕ</b>
+      <span>студия красоты</span>
     </a>
-    <nav class="nav-desktop" aria-label="Основная навигация">
-      <a href="#studio">Студия</a>
-      <a href="#services">Услуги</a>
-      <a href="#works">Работы</a>
-      <a href="#masters">Мастера</a>
-      <a href="#reviews">Отзывы</a>
-      <a href="#contacts">Контакты</a>
-    </nav>
     <div class="header-right">
-      <a class="header-phone" href="tel:+79212624308">+7 921 262-43-08</a>
-      <a class="btn btn-gold btn-sm" href="#booking">Записаться</a>
-      <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false" aria-controls="mMenu">
-        <span></span><span></span>
-      </button>
+      <a class="header-tel" href="tel:+79212624308">
+        <svg class="icon"><use href="#i-phone"/></svg>
+        <span>+7 (921) 262-43-08</span>
+      </a>
+      <button class="btn btn-primary" data-book>Записаться</button>
     </div>
   </div>
 </header>
 
-<div class="m-menu" id="mMenu" aria-hidden="true">
-  <nav aria-label="Мобильная навигация">
-    <a href="#studio">Студия <small>01</small></a>
-    <a href="#services">Услуги и цены <small>02</small></a>
-    <a href="#works">Работы <small>03</small></a>
-    <a href="#masters">Мастера <small>04</small></a>
-    <a href="#reviews">Отзывы <small>05</small></a>
-    <a href="#contacts">Как нас найти <small>06</small></a>
-  </nav>
-  <div class="m-menu-foot">
-    <a href="tel:+79212624308">+7 921 262-43-08</a>
-    <span>Пн–сб 10:00–19:00 · вс 10:00–18:00</span>
-    <span>Калининград, ул. Виктора Денисова, 16 к1</span>
-  </div>
-</div>
+<main id="top">
 
-<!-- ================= HERO ================= -->
-<section class="hero" aria-label="Студия красоты КАРЕ">
-  <div class="hero-bg" aria-hidden="true">
-    <img src="img/kare_photo21.jpg" alt="" fetchpriority="high">
-  </div>
-  <div class="hero-shade" aria-hidden="true"></div>
-  <div class="container hero-in">
-    <p class="eyebrow eyebrow-light">Студия красоты · Калининград · ЖК «Восток»</p>
-    <h1 class="hero-title">
-      <span class="hl"><span style="--d:.15s">Стрижки и цвет,</span></span>
-      <span class="hl"><span style="--d:.3s">за которыми</span></span>
-      <span class="hl"><span style="--d:.45s">возвращаются <em>годами</em></span></span>
-    </h1>
-    <p class="hero-sub">Женский, мужской и детский зал, сложное окрашивание, маникюр и педикюр. Светлая уютная студия, честные цены и мастера, к которым не хочется искать замену.</p>
-    <div class="hero-cta">
-      <a class="btn btn-gold" href="tel:+79212624308">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C9.7 21 3 14.3 3 6a2 2 0 0 1 2-2z" stroke-linejoin="round"/></svg>
-        Позвонить и записаться
-      </a>
-      <a class="btn btn-ghost-light" href="#services">Услуги и цены</a>
-    </div>
-    <ul class="hero-facts">
-      <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.8 6 6.6.6-5 4.4 1.5 6.4L12 16.7 6.1 20l1.5-6.4-5-4.4 6.6-.6z"/></svg>Оценка гостей — 4,8</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2.5" stroke-linecap="round"/></svg>Работаем 7 дней в неделю</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 16V11l2-5h12l2 5v5" stroke-linejoin="round"/><path d="M4 16h16v3H4z" stroke-linejoin="round"/><circle cx="7.5" cy="19.5" r="1.6"/><circle cx="16.5" cy="19.5" r="1.6"/></svg>Парковка у самого входа</li>
-    </ul>
-  </div>
-  <div class="hero-scroll" aria-hidden="true"><i></i>листайте</div>
-</section>
-
-<!-- ================= TICKER ================= -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <div class="ticker-list">
-      <span>Женские стрижки <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-      <span>Мужские стрижки <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-      <span>Детские стрижки <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-      <span>Сложное окрашивание <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-      <span>Химическая завивка <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-      <span>Маникюр <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-      <span>Педикюр <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-    </div>
-    <div class="ticker-list">
-      <span>Женские стрижки <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-      <span>Мужские стрижки <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-      <span>Детские стрижки <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-      <span>Сложное окрашивание <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-      <span>Химическая завивка <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-      <span>Маникюр <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-      <span>Педикюр <svg viewBox="0 0 10 10" fill="currentColor"><path d="M5 0l1.4 3.6L10 5 6.4 6.4 5 10 3.6 6.4 0 5l3.6-1.4z"/></svg></span>
-    </div>
-  </div>
-</div>
-
-<!-- ================= ABOUT ================= -->
-<section class="sec-pad" id="studio">
-  <div class="container about-grid">
-    <div class="about-left">
-      <p class="eyebrow" data-reveal>Студия</p>
-      <h2 data-reveal style="--d:.08s">Светлый салон, в который хочется вернуться</h2>
-      <p data-reveal style="--d:.14s">«Каре» — камерная студия красоты на первом этаже жилого комплекса «Восток». Современный интерьер, большие окна, уютная атмосфера и мастера, которые слышат вас с полуслова.</p>
-      <p data-reveal style="--d:.2s">Мы работаем по предварительной записи — вы приходите к своему времени, без ожидания и суеты. За чашкой чая обсудим форму, цвет и уход, а дальше — дело техники и золотых рук.</p>
-      <ul class="about-points">
-        <li data-reveal style="--d:.24s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Современный дизайн и продуманное пространство</li>
-        <li data-reveal style="--d:.3s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Вся семья в одном кресле: от малышей до пап</li>
-        <li data-reveal style="--d:.36s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Честный прайс: женская стрижка от 800 ₽, мужская от 400 ₽</li>
-      </ul>
-      <ul class="about-stats" data-reveal style="--d:.42s">
-        <li><b>7 дней</b><span>в неделю открыты</span></li>
-        <li><b>с 2019</b><span>года ходят к нашим мастерам</span></li>
-        <li><b>6</b><span>направлений услуг</span></li>
-      </ul>
-    </div>
-    <div class="about-right">
-      <figure data-reveal>
-        <div class="frame frame-hover"><img src="img/kare_photo03.jpg" alt="Вход в студию красоты КАРЕ с белыми колоннами и стеклянной дверью" loading="lazy"></div>
-        <figcaption>Вход в студию — ул. Виктора Денисова, 16 к1</figcaption>
-      </figure>
-      <figure data-reveal style="--d:.1s">
-        <div class="frame frame-hover wide"><img src="img/kare_photo25.jpg" alt="Парикмахерский зал студии КАРЕ: рабочие места, зеркала и кресла" loading="lazy"></div>
-        <figcaption>Парикмахерский зал студии</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section class="services sec-pad" id="services">
-  <div class="container">
-    <div class="sec-head">
-      <div>
-        <p class="eyebrow" data-reveal>Услуги и цены</p>
-        <h2 data-reveal style="--d:.08s">От чёткой формы до сложного цвета</h2>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="overline">Калининград · студия красоты</span>
+      <h1>Стрижки и окрашивания, с которыми вы будете <em>выходить из дома с улыбкой</em></h1>
+      <p class="hero-sub">Женские и мужские стрижки, детские стрижки, сложные окрашивания, маникюр и педикюр. Работаем по предварительной записи — вы приходите к своему времени, без очередей и ожидания.</p>
+      <div class="rating-pill">
+        <span class="num">4,4</span>
+        <span class="stars" style="--v:88%">
+          <svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg>
+          <span class="fill"><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg></span>
+        </span>
+        <span class="txt">рейтинг на Яндекс Картах<br>4,8 — в 2ГИС</span>
       </div>
-      <p class="services-head-note" data-reveal style="--d:.14s">Мастер подберёт форму и оттенок под тип волос, овал лица и ваш ритм жизни — и подскажет, как ухаживать дома.</p>
-    </div>
-    <div class="srv-list">
-      <a class="srv-row" href="#booking" data-reveal>
-        <span class="srv-num">01</span>
-        <span class="srv-body">
-          <span class="srv-name">Женская стрижка и укладка</span>
-          <span class="srv-desc">Форма под структуру волос и черты лица, лёгкая укладка в финале.</span>
-        </span>
-        <span class="srv-price">от 800 ₽<small>по данным каталога 2ГИС</small></span>
-        <span class="srv-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h16M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a class="srv-row" href="#booking" data-reveal style="--d:.05s">
-        <span class="srv-num">02</span>
-        <span class="srv-body">
-          <span class="srv-name">Мужская стрижка</span>
-          <span class="srv-desc">Классика и современные формы, ножницы и машинка, окантовка.</span>
-        </span>
-        <span class="srv-price">от 400 ₽<small>по данным каталога 2ГИС</small></span>
-        <span class="srv-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h16M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a class="srv-row" href="#booking" data-reveal style="--d:.1s">
-        <span class="srv-num">03</span>
-        <span class="srv-body">
-          <span class="srv-name">Детская стрижка</span>
-          <span class="srv-desc">Терпеливо и бережно — для самых маленьких гостей студии.</span>
-        </span>
-        <span class="srv-price ask">Цена при записи</span>
-        <span class="srv-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h16M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a class="srv-row" href="#booking" data-reveal style="--d:.15s">
-        <span class="srv-num">04</span>
-        <span class="srv-body">
-          <span class="srv-name">Сложное окрашивание</span>
-          <span class="srv-desc">Многотональные техники, мягкие переходы, сияющий цвет с уходом.</span>
-        </span>
-        <span class="srv-price ask">Цена при записи</span>
-        <span class="srv-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h16M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a class="srv-row" href="#booking" data-reveal style="--d:.2s">
-        <span class="srv-num">05</span>
-        <span class="srv-body">
-          <span class="srv-name">Химическая завивка</span>
-          <span class="srv-desc">Упругий завиток и прикорневой объём, который держится месяцами.</span>
-        </span>
-        <span class="srv-price ask">Цена при записи</span>
-        <span class="srv-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h16M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a class="srv-row" href="#booking" data-reveal style="--d:.25s">
-        <span class="srv-num">06</span>
-        <span class="srv-body">
-          <span class="srv-name">Маникюр</span>
-          <span class="srv-desc">Аккуратная форма, забота о кутикуле, стойкое покрытие.</span>
-        </span>
-        <span class="srv-price ask">Цена при записи</span>
-        <span class="srv-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h16M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a class="srv-row" href="#booking" data-reveal style="--d:.3s">
-        <span class="srv-num">07</span>
-        <span class="srv-body">
-          <span class="srv-name">Педикюр</span>
-          <span class="srv-desc">Комплексный уход за стопами и ногтями в любое время года.</span>
-        </span>
-        <span class="srv-price ask">Цена при записи</span>
-        <span class="srv-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h16M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-    </div>
-    <p class="srv-note" data-reveal>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.2v.4" stroke-linecap="round"/></svg>
-      Стоимость зависит от длины и густоты волос. Точную цену мастер назовёт при записи по телефону.
-    </p>
-  </div>
-</section>
-
-<!-- ================= WORKS ================= -->
-<section class="sec-pad" id="works">
-  <div class="container">
-    <div class="sec-head">
-      <div>
-        <p class="eyebrow" data-reveal>Работы мастеров</p>
-        <h2 data-reveal style="--d:.08s">Форма, цвет и характер</h2>
+      <div class="hero-cta">
+        <button class="btn btn-primary" data-book>Записаться</button>
+        <a class="btn btn-ghost" href="tel:+79212624308"><svg class="icon"><use href="#i-phone"/></svg>Позвонить</a>
       </div>
-      <div class="rail-nav" data-reveal style="--d:.14s">
-        <button class="rail-btn" data-rail="#worksRail" data-dir="-1" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M15 5l-7 7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <button class="rail-btn" data-rail="#worksRail" data-dir="1" aria-label="Вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="hero-facts">
+        <div><svg class="icon"><use href="#i-clock"/></svg>Пн–Сб 10:00–19:00, Вс 10:00–18:00</div>
+        <div><svg class="icon"><use href="#i-pin"/></svg>ул. Виктора Денисова, 16 к1</div>
       </div>
     </div>
-  </div>
-  <div class="rail-wrap">
-    <div class="rail" id="worksRail" data-reveal>
-      <figure class="work-card"><img src="img/kare_photo05.jpg" alt="Окрашивание в глубокий шоколадный оттенок с мягкими волнами" loading="lazy"><figcaption class="work-cap"><b>Глубокий шоколад</b><span>Окрашивание</span></figcaption></figure>
-      <figure class="work-card"><img src="img/kare_photo18.jpg" alt="Короткая стрижка со светлыми волосами и розовым оттенком" loading="lazy"><figcaption class="work-cap"><b>Короткая форма с акцентом</b><span>Стрижка</span></figcaption></figure>
-      <figure class="work-card"><img src="img/kare_photo22.jpg" alt="Светлые волнистые волосы с мягкими переходами тона" loading="lazy"><figcaption class="work-cap"><b>Мягкий переход тона</b><span>Блонд</span></figcaption></figure>
-      <figure class="work-card"><img src="img/kare_photo24.jpg" alt="Стрижка боб на светлых волосах, чистая линия среза" loading="lazy"><figcaption class="work-cap"><b>Боб: чистая линия</b><span>Стрижка</span></figcaption></figure>
-      <figure class="work-card"><img src="img/kare_photo26.jpg" alt="Короткие вьющиеся волосы после стрижки" loading="lazy"><figcaption class="work-cap"><b>Текстура и завиток</b><span>Стрижка</span></figcaption></figure>
-      <figure class="work-card"><img src="img/kare_photo27.jpg" alt="Золотистые вьющиеся волосы до плеч" loading="lazy"><figcaption class="work-cap"><b>Золотистый блонд</b><span>Окрашивание</span></figcaption></figure>
-    </div>
-  </div>
-  <div class="container">
-    <p class="rail-hint" data-reveal><svg viewBox="0 0 28 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 7h26M21 1.5L26.5 7 21 12.5M7 1.5L1.5 7 7 12.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Листайте или тяните в сторону</p>
-  </div>
-</section>
-
-<!-- ================= MASTERS ================= -->
-<section class="masters sec-pad" id="masters">
-  <div class="container">
-    <div class="sec-head">
-      <div>
-        <p class="eyebrow" data-reveal>Мастера</p>
-        <h2 data-reveal style="--d:.08s">Люди, к которым возвращаются</h2>
+    <figure class="hero-photo">
+      <div class="frame">
+        <!-- @@PHOTO:hero@@ файл: kare_photo21.jpg | подпись: Светлый зал студии: пудровые стены, геометрические светильники и удобные кресла -->
+        <img src="img/PHOTO_hero.jpg" alt="Светлый зал студии красоты Каре в Калининграде">
       </div>
-    </div>
-    <figure class="masters-photo" data-reveal>
-      <div class="frame frame-hover"><img src="img/kare_photo07.jpg" alt="Мастера студии КАРЕ в зале" loading="lazy"></div>
-      <figcaption>В «Каре» вас встречают как давних знакомых</figcaption>
+      <p class="photo-cap">Светлый зал студии: пудровые стены, геометрические светильники и удобные кресла</p>
     </figure>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Женские стрижки</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>Мужские стрижки</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>Детские стрижки</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>Сложные окрашивания</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>Прикорневой объём</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>Маникюр</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>Педикюр</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>По предварительной записи</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>Женские стрижки</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>Мужские стрижки</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>Детские стрижки</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>Сложные окрашивания</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>Прикорневой объём</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>Маникюр</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>Педикюр</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+    <span>По предварительной записи</span><svg class="icon-fill"><use href="#i-diamond"/></svg>
+  </div>
+</div>
+
+<section class="works" id="works">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline">Работы мастеров</span>
+      <h2>Хочу — как здесь</h2>
+      <p>Нажмите на работу, которая нравится, — и мы откроем запись с этой услугой. Мастер подберёт форму и оттенок под вас, а не «по прайсу».</p>
+    </div>
+    <div class="works-grid">
+      <article class="work-card">
+        <div class="frame">
+          <!-- @@PHOTO:work1@@ файл: kare_photo18.jpg | подпись: Короткая стрижка с нежным розовым тонированием -->
+          <img src="img/PHOTO_work1.jpg" alt="Короткая стрижка с розовым тонированием, вид сзади">
+        </div>
+        <div class="work-body">
+          <p>Короткая стрижка с нежным розовым тонированием</p>
+          <button class="work-btn" data-book data-service="Сложное окрашивание">Хочу так <svg class="icon"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+      <article class="work-card">
+        <div class="frame">
+          <!-- @@PHOTO:work2@@ файл: kare_photo05.jpg | подпись: Сложное окрашивание в натуральной гамме и укладка волнами -->
+          <img src="img/PHOTO_work2.jpg" alt="Окрашивание в каштановые оттенки и волны, вид сзади">
+        </div>
+        <div class="work-body">
+          <p>Сложное окрашивание в натуральной гамме и укладка волнами</p>
+          <button class="work-btn" data-book data-service="Сложное окрашивание">Хочу так <svg class="icon"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+      <article class="work-card">
+        <div class="frame">
+          <!-- @@PHOTO:work3@@ файл: kare_photo22.jpg | подпись: Светлые пряди и лёгкая волна на средней длине -->
+          <img src="img/PHOTO_work3.jpg" alt="Светлое окрашивание с прядями на средней длине, вид сзади">
+        </div>
+        <div class="work-body">
+          <p>Светлые пряди и лёгкая волна на средней длине</p>
+          <button class="work-btn" data-book data-service="Сложное окрашивание">Хочу так <svg class="icon"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+      <article class="work-card">
+        <div class="frame">
+          <!-- @@PHOTO:work4@@ файл: kare_photo24.jpg | подпись: Стрижка боб с аккуратным контуром -->
+          <img src="img/PHOTO_work4.jpg" alt="Стрижка боб на светлых волосах, вид сзади">
+        </div>
+        <div class="work-body">
+          <p>Стрижка боб с аккуратным контуром</p>
+          <button class="work-btn" data-book data-service="Женская стрижка">Хочу так <svg class="icon"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="prices">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline">Услуги и цены</span>
+      <h2>Честный прайс без сюрпризов</h2>
+      <p>Точную стоимость мастер подтвердит при записи — она зависит от длины, густоты и состояния волос.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3><svg class="icon"><use href="#i-scissors"/></svg>Волосы</h3>
+        <div class="price-row"><span>Женская стрижка</span><b>от 800 ₽</b></div>
+        <div class="price-row"><span>Мужская стрижка</span><b>от 400 ₽</b></div>
+        <div class="price-row"><span>Детская стрижка</span><b>по запросу</b></div>
+        <div class="price-row"><span>Сложное окрашивание</span><b>по запросу</b></div>
+        <div class="price-row"><span>Прикорневой объём</span><b>по запросу</b></div>
+        <div class="price-row"><span>Женская химзавивка</span><b>по запросу</b></div>
+      </div>
+      <div class="price-card">
+        <h3><svg class="icon"><use href="#i-sparkle"/></svg>Ногти</h3>
+        <div class="price-row"><span>Маникюр</span><b>по запросу</b></div>
+        <div class="price-row"><span>Педикюр</span><b>по запросу</b></div>
+        <div class="price-note">
+          <svg class="icon"><use href="#i-check"/></svg>
+          <span>Перед процедурой мастер бесплатно проконсультирует: подскажет форму, оттенок и уход, посчитает стоимость заранее — до того, как вы сядете в кресло.</span>
+        </div>
+      </div>
+    </div>
+    <div class="price-cta">
+      <button class="btn btn-primary" data-book>Записаться</button>
+      <a class="btn btn-ghost" href="tel:+79212624308"><svg class="icon"><use href="#i-phone"/></svg>Уточнить цены по телефону</a>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline">Почему «Каре»</span>
+      <h2>Студия, в которую возвращаются</h2>
+      <p>Мы небольшой и уютный салон на первом этаже жилого дома — и в этом наша сила: здесь нет конвейера, здесь есть время на каждого гостя.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <svg class="icon"><use href="#i-clock"/></svg>
+        <h3>По предварительной записи</h3>
+        <p>Вы приходите к своему времени — без очередей и ожидания. Подберём удобный день и час при звонке или через форму.</p>
+      </div>
+      <div class="why-card">
+        <svg class="icon"><use href="#i-sparkle"/></svg>
+        <h3>Сложные техники</h3>
+        <p>Сложные окрашивания, прикорневой объём, женские и мужские стрижки — от коротких графичных до длинных волн.</p>
+      </div>
+      <div class="why-card">
+        <svg class="icon"><use href="#i-heart"/></svg>
+        <h3>Мастера, к которым приходят годами</h3>
+        <p>Гости ходят к своим мастерам с 2019 года и приводят близких — это лучшая рекомендация.</p>
+      </div>
+      <div class="why-card">
+        <svg class="icon"><use href="#i-sun"/></svg>
+        <h3>Светло, чисто, уютно</h3>
+        <p>Светлый зал с современным дизайном и порядком — гости отдельно отмечают атмосферу и дружелюбный приём.</p>
+      </div>
+      <div class="why-card">
+        <svg class="icon"><use href="#i-pin"/></svg>
+        <h3>Рядом с домом</h3>
+        <p>Первый этаж жилого дома в ЖК «Восток», Ленинградский район — удобно зайти по пути, без записи «на бегу» не останетесь.</p>
+      </div>
+      <div class="why-card">
+        <svg class="icon"><use href="#i-wifi"/></svg>
+        <h3>Всё для комфорта</h3>
+        <p>Wi-Fi для гостей, оплата наличными или переводом с карты. Маникюр и педикюр — в одном месте со стрижкой.</p>
+      </div>
+    </div>
+    <figure class="why-photo">
+      <div class="frame">
+        <!-- @@PHOTO:hall@@ файл: kare_photo25.jpg | подпись: Рабочие места студии: просторно, у каждого мастера своё пространство -->
+        <img src="img/PHOTO_hall.jpg" alt="Рабочие места и зеркала в студии Каре">
+      </div>
+      <p class="photo-cap">Рабочие места студии: просторно, у каждого мастера своё пространство</p>
+    </figure>
+  </div>
+</section>
+
+<section id="masters">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="overline">Команда</span>
+      <h2>Мастера своего дела</h2>
+      <p>Имена, которые гости пишут в отзывах, — и к которым записываются заранее.</p>
+    </div>
     <div class="masters-grid">
-      <article class="master-card" data-reveal>
-        <div class="master-top">
-          <span class="monogram" aria-hidden="true">К</span>
-          <div>
-            <h3>Карина</h3>
-            <small>Универсальный мастер</small>
-          </div>
-        </div>
-        <p>Женские, мужские и детские стрижки. Внимательна к деталям, работает с любым типом волос. Клиенты приходят к ней с 2019 года — и больше никому не доверяют свои волосы.</p>
-        <blockquote class="master-quote">«Отличный мастер Карина! Хожу только к ней. Душевная, с чувством юмора и позитива»<cite>Виктория Кисель, отзыв на картах</cite></blockquote>
-      </article>
-      <article class="master-card" data-reveal style="--d:.1s">
-        <div class="master-top">
-          <span class="monogram" aria-hidden="true">И</span>
-          <div>
-            <h3>Ирина</h3>
-            <small>Парикмахер экстра-класса</small>
-          </div>
-        </div>
-        <p>Стрижки и работа с цветом. В отзывах её называют «золотые руки»: точная форма, аккуратный срез и настроение после визита, которое держится дольше, чем укладка.</p>
-        <blockquote class="master-quote">«Рекомендую Ирину — золотые руки»<cite>Сергей, отзыв на картах</cite></blockquote>
-      </article>
+      <div class="master-card">
+        <svg class="icon"><use href="#i-user"/></svg>
+        <h3>Карина</h3>
+        <div class="role">Женский и мужской мастер · окрашивания</div>
+        <p>К Карине приходят стричься всей семьёй — и женщины, и мужчины. В отзывах её называют душевной, с чувством юмора, а стригутся у неё с 2019 года.</p>
+      </div>
+      <div class="master-card">
+        <svg class="icon"><use href="#i-user"/></svg>
+        <h3>Ирина</h3>
+        <div class="role">Парикмахер экстра-класса</div>
+        <p>Гости пишут про «золотые руки» и отмечают: к Ирине хочется возвращаться. Подберёт стрижку и укладку, которая будет жить вашей жизнью, а не только красиво лежать в салоне.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ================= REVIEWS ================= -->
-<section class="reviews sec-pad" id="reviews">
-  <div class="container">
+<section class="reviews" id="reviews">
+  <div class="wrap">
     <div class="sec-head">
-      <div>
-        <p class="eyebrow" data-reveal>Отзывы</p>
-        <h2 data-reveal style="--d:.08s">Слова тех, кто уже в кресле</h2>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:16px;align-items:flex-end" data-reveal style="--d:.14s">
-        <div class="rating-chips">
-          <span class="rating-chip"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.8 6 6.6.6-5 4.4 1.5 6.4L12 16.7 6.1 20l1.5-6.4-5-4.4 6.6-.6z"/></svg><b>4,8</b>· 2ГИС, 20 оценок</span>
-          <span class="rating-chip"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.8 6 6.6.6-5 4.4 1.5 6.4L12 16.7 6.1 20l1.5-6.4-5-4.4 6.6-.6z"/></svg><b>4,4</b>· Яндекс Карты</span>
-        </div>
-        <div class="rail-nav">
-          <button class="rail-btn" data-rail="#revRail" data-dir="-1" aria-label="Предыдущие отзывы"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M15 5l-7 7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <button class="rail-btn" data-rail="#revRail" data-dir="1" aria-label="Следующие отзывы"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        </div>
+      <span class="overline">Отзывы</span>
+      <h2>Что говорят гости</h2>
+    </div>
+    <div class="reviews-total">
+      <div class="badge">
+        <span class="num">4,4</span>
+        <span class="stars" style="--v:88%">
+          <svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg>
+          <span class="fill"><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg><svg class="icon-fill"><use href="#i-star"/></svg></span>
+        </span>
+        <span class="txt">рейтинг на Яндекс Картах,<br>4,8 — рейтинг в 2ГИС</span>
       </div>
     </div>
-  </div>
-  <div class="rail-wrap">
-    <div class="rail" id="revRail" data-reveal>
-      <article class="rev-card">
-        <svg class="rev-quote" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V13.6C0 5.9 4.3 1.1 12 0l1.4 3.6C8.6 5.1 6.6 7.8 6.4 11H13v13H0zm17 0V13.6C17 5.9 21.3 1.1 29 0l1 3.6c-4.8 1.5-6.8 4.2-7 7.4H29.6V24H17z" transform="scale(.93)"/></svg>
-        <p class="rev-text">Очень хорошее место! Классно постригли, хожу к Карине и всем довольна. Всё супер, буду продолжать ходить только сюда и никуда больше.</p>
-        <div class="rev-foot"><div><div class="rev-name">Захария Бурдюк</div><div class="rev-date">15 мая</div></div><span class="rev-src">Яндекс Карты</span></div>
+    <div class="reviews-grid">
+      <article class="review-card">
+        <svg class="icon-fill"><use href="#i-quote"/></svg>
+        <p>Очень хорошее место! Классно постригли, хожу к Карине и всем довольна. Всё супер, буду продолжать ходить только сюда и никуда больше</p>
+        <div class="review-meta"><b>Захария Бурдюк</b><span>Яндекс Карты</span></div>
       </article>
-      <article class="rev-card">
-        <svg class="rev-quote" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V13.6C0 5.9 4.3 1.1 12 0l1.4 3.6C8.6 5.1 6.6 7.8 6.4 11H13v13H0zm17 0V13.6C17 5.9 21.3 1.1 29 0l1 3.6c-4.8 1.5-6.8 4.2-7 7.4H29.6V24H17z" transform="scale(.93)"/></svg>
-        <p class="rev-text">Отличный мастер Карина! Хожу только к ней. Душевная, с чувством юмора и позитива. В салоне всегда дружелюбная атмосфера и не хочется оттуда уходить.</p>
-        <div class="rev-foot"><div><div class="rev-name">Виктория Кисель</div><div class="rev-date">10 ноября 2024</div></div><span class="rev-src">Яндекс Карты</span></div>
+      <article class="review-card">
+        <svg class="icon-fill"><use href="#i-quote"/></svg>
+        <p>Отличный мастер Карина!!! Хожу только к ней. Душевная, с чувством юмора и позитива. В салоне всегда дружелюбная атмосфера и не хочется оттуда уходить))</p>
+        <div class="review-meta"><b>Виктория Кисель</b><span>Яндекс Карты</span></div>
       </article>
-      <article class="rev-card">
-        <svg class="rev-quote" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V13.6C0 5.9 4.3 1.1 12 0l1.4 3.6C8.6 5.1 6.6 7.8 6.4 11H13v13H0zm17 0V13.6C17 5.9 21.3 1.1 29 0l1 3.6c-4.8 1.5-6.8 4.2-7 7.4H29.6V24H17z" transform="scale(.93)"/></svg>
-        <p class="rev-text">Отличный мужской мастер Карина, стригусь у неё с 2019 года!</p>
-        <div class="rev-foot"><div><div class="rev-name">Денис М</div><div class="rev-date">7 июля</div></div><span class="rev-src">Яндекс Карты</span></div>
+      <article class="review-card">
+        <svg class="icon-fill"><use href="#i-quote"/></svg>
+        <p>Отличный мужской мастер Карина, стригусь у нее с 2019 года!</p>
+        <div class="review-meta"><b>Денис М</b><span>Яндекс Карты</span></div>
       </article>
-      <article class="rev-card">
-        <svg class="rev-quote" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V13.6C0 5.9 4.3 1.1 12 0l1.4 3.6C8.6 5.1 6.6 7.8 6.4 11H13v13H0zm17 0V13.6C17 5.9 21.3 1.1 29 0l1 3.6c-4.8 1.5-6.8 4.2-7 7.4H29.6V24H17z" transform="scale(.93)"/></svg>
-        <p class="rev-text">Очень светлый и уютный салон красоты. Современный дизайн, удобное местоположение. Работают настоящие профессионалы. Особенно хочу отметить золотые руки Ирины. Парикмахер экстра-класса!</p>
-        <div class="rev-foot"><div><div class="rev-name">Марина Кузнецова</div><div class="rev-date">1 июня 2023</div></div><span class="rev-src">Яндекс Карты</span></div>
-      </article>
-      <article class="rev-card">
-        <svg class="rev-quote" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V13.6C0 5.9 4.3 1.1 12 0l1.4 3.6C8.6 5.1 6.6 7.8 6.4 11H13v13H0zm17 0V13.6C17 5.9 21.3 1.1 29 0l1 3.6c-4.8 1.5-6.8 4.2-7 7.4H29.6V24H17z" transform="scale(.93)"/></svg>
-        <p class="rev-text">Чисто, уютно. Адекватный ценник. Хорошие мастера. Вежливо и тактично. Рекомендую Ирину — золотые руки.</p>
-        <div class="rev-foot"><div><div class="rev-name">Сергей</div><div class="rev-date">21 марта 2023</div></div><span class="rev-src">Яндекс Карты</span></div>
-      </article>
-      <article class="rev-card">
-        <svg class="rev-quote" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V13.6C0 5.9 4.3 1.1 12 0l1.4 3.6C8.6 5.1 6.6 7.8 6.4 11H13v13H0zm17 0V13.6C17 5.9 21.3 1.1 29 0l1 3.6c-4.8 1.5-6.8 4.2-7 7.4H29.6V24H17z" transform="scale(.93)"/></svg>
-        <p class="rev-text">Хороший, светлый, просторный салон. Находиться в нём комфортно. Прекрасный мастер.</p>
-        <div class="rev-foot"><div><div class="rev-name">Марина Губарева</div><div class="rev-date">2 августа 2023</div></div><span class="rev-src">Яндекс Карты</span></div>
-      </article>
-      <article class="rev-card">
-        <svg class="rev-quote" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V13.6C0 5.9 4.3 1.1 12 0l1.4 3.6C8.6 5.1 6.6 7.8 6.4 11H13v13H0zm17 0V13.6C17 5.9 21.3 1.1 29 0l1 3.6c-4.8 1.5-6.8 4.2-7 7.4H29.6V24H17z" transform="scale(.93)"/></svg>
-        <p class="rev-text">Классное место. Хорошие мастера своего дела.</p>
-        <div class="rev-foot"><div><div class="rev-name">Александр Аникеев</div><div class="rev-date">15 марта</div></div><span class="rev-src">Яндекс Карты</span></div>
-      </article>
-      <article class="rev-card">
-        <svg class="rev-quote" viewBox="0 0 30 24" fill="currentColor" aria-hidden="true"><path d="M0 24V13.6C0 5.9 4.3 1.1 12 0l1.4 3.6C8.6 5.1 6.6 7.8 6.4 11H13v13H0zm17 0V13.6C17 5.9 21.3 1.1 29 0l1 3.6c-4.8 1.5-6.8 4.2-7 7.4H29.6V24H17z" transform="scale(.93)"/></svg>
-        <p class="rev-text">Карина — прекрасный мастер своего дела.</p>
-        <div class="rev-foot"><div><div class="rev-name">Аня Ногина</div><div class="rev-date">8 октября 2023</div></div><span class="rev-src">Яндекс Карты</span></div>
+      <article class="review-card">
+        <svg class="icon-fill"><use href="#i-quote"/></svg>
+        <p>Очень светлый и уютный салон красоты. Современный дизайн, удобное местоположение. В салоне работают настоящие профессионалы и мастера своего дела. Особенно хочу отметить работу и золотые руки Ирины. Парикмахер экстра класса! Спасибо за работу и хорошее настроение.</p>
+        <div class="review-meta"><b>Марина Кузнецова</b><span>Яндекс Карты</span></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ================= BOOKING ================= -->
-<section class="sec-pad" id="booking">
-  <div class="container booking-grid">
-    <div class="booking-left">
-      <p class="eyebrow" data-reveal>Запись</p>
-      <h2 data-reveal style="--d:.08s">Позвоните — подберём удобное время</h2>
-      <p data-reveal style="--d:.14s">Работаем по предварительной записи, чтобы вы не ждали ни минуты. Скажите, чего хотите, — остальное мастера возьмут на себя.</p>
-      <div data-reveal style="--d:.2s">
-        <a class="big-phone" href="tel:+79212624308">
-          <span class="ph-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C9.7 21 3 14.3 3 6a2 2 0 0 1 2-2z" stroke-linejoin="round"/></svg></span>
-          +7 921 262-43-08
-        </a>
-        <p class="booking-note">Ежедневно. Пн–сб 10:00–19:00, вс 10:00–18:00</p>
-        <a class="btn btn-dark" href="https://wa.me/79212624308" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" stroke-linejoin="round"/><path d="M8.8 8.6c.3-.7.6-.7 1-.7h.6c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .5-.1.7l-.6.8c-.2.2-.2.4 0 .7a7 7 0 0 0 2.7 2.4c.3.2.5.1.7-.1l.7-.8c.2-.3.4-.3.7-.2l1.9.9c.4.2.5.4.5.6-.1 1-.9 2-2 2-4.4 0-8-3.2-8-7.3 0-.5.1-1 .1-1.4z" stroke-linejoin="round"/></svg>
-          Написать в WhatsApp
-        </a>
-      </div>
-      <div class="booking-hours" data-reveal style="--d:.26s">
-        <div><b>10:00–19:00</b><span>понедельник — суббота</span></div>
-        <div><b>10:00–18:00</b><span>воскресенье</span></div>
-        <div><b>1 этаж</b><span>отдельный вход</span></div>
-      </div>
-    </div>
-    <div class="form-card" data-reveal style="--d:.16s">
-      <div class="form-wrap" id="formWrap">
-        <form id="bookingForm" novalidate>
-          <h3>Оставьте заявку</h3>
-          <p>Перезвоним, уточним детали и подтвердим запись.</p>
-          <div class="field">
-            <label for="fName">Ваше имя</label>
-            <input type="text" id="fName" name="name" placeholder="Как к вам обращаться" autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="fPhone">Телефон</label>
-            <input type="tel" id="fPhone" name="phone" placeholder="+7 ___ ___-__-__" autocomplete="tel">
-          </div>
-          <div class="field">
-            <label for="fService">Услуга</label>
-            <select id="fService" name="service">
-              <option>Женская стрижка и укладка</option>
-              <option>Мужская стрижка</option>
-              <option>Детская стрижка</option>
-              <option>Сложное окрашивание</option>
-              <option>Химическая завивка</option>
-              <option>Маникюр</option>
-              <option>Педикюр</option>
-              <option>Подскажете на месте</option>
-            </select>
-          </div>
-          <button class="btn btn-gold btn-block" type="submit">
-            Записаться в студию
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h16M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </form>
-        <div class="form-done" role="status">
-          <span class="ok-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <h3>Заявка принята</h3>
-          <p>Мы перезвоним вам в рабочее время студии. Если удобно быстрее — наберите нам напрямую: <a href="tel:+79212624308" style="font-weight:700;color:var(--gold)">+7 921 262-43-08</a>.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACTS ================= -->
-<section class="contacts sec-pad" id="contacts">
-  <div class="container">
+<section id="contacts">
+  <div class="wrap">
     <div class="sec-head">
-      <div>
-        <p class="eyebrow" data-reveal>Как нас найти</p>
-        <h2 data-reveal style="--d:.08s">Приезжайте — место найдётся</h2>
-      </div>
+      <span class="overline">Как нас найти</span>
+      <h2>Мы рядом — заходите</h2>
     </div>
     <div class="contacts-grid">
-      <div>
-        <div class="c-item" data-reveal>
-          <span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+      <div class="contact-card">
+        <div class="contact-row">
+          <svg class="icon"><use href="#i-pin"/></svg>
           <div>
-            <small>Адрес</small>
-            <b>Калининград, ул. Виктора Денисова, 16 к1</b>
-            <span>ЖК «Восток», Ленинградский район, 1 этаж, отдельный вход</span>
+            <div class="lbl">Адрес</div>
+            <div class="val">Калининград, ул. Виктора Денисова, 16, корп. 1<small>Первый этаж жилого дома, отдельный вход</small></div>
           </div>
         </div>
-        <div class="c-item" data-reveal style="--d:.06s">
-          <span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2.5" stroke-linecap="round"/></svg></span>
+        <div class="contact-row">
+          <svg class="icon"><use href="#i-clock"/></svg>
           <div>
-            <small>Режим работы</small>
-            <b>Пн–сб: 10:00–19:00 · Вс: 10:00–18:00</b>
-            <span>Без выходных, по предварительной записи</span>
+            <div class="lbl">Часы работы</div>
+            <div class="val">Пн–Сб 10:00–19:00 · Вс 10:00–18:00<small>Приём по предварительной записи</small></div>
           </div>
         </div>
-        <div class="c-item" data-reveal style="--d:.12s">
-          <span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C9.7 21 3 14.3 3 6a2 2 0 0 1 2-2z" stroke-linejoin="round"/></svg></span>
+        <div class="contact-row">
+          <svg class="icon"><use href="#i-phone"/></svg>
           <div>
-            <small>Телефон</small>
-            <b><a href="tel:+79212624308">+7 921 262-43-08</a></b>
-            <span>Запись и консультации по услугам</span>
+            <div class="lbl">Телефон записи</div>
+            <div class="val"><a href="tel:+79212624308">+7 (921) 262-43-08</a></div>
           </div>
         </div>
-        <div class="parking-flag" data-reveal style="--d:.18s">
-          <span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 16V11l2-5h12l2 5v5" stroke-linejoin="round"/><path d="M4 16h16v3H4z" stroke-linejoin="round"/><circle cx="7.5" cy="19.5" r="1.6"/><circle cx="16.5" cy="19.5" r="1.6"/></svg></span>
+        <div class="contact-row">
+          <svg class="icon"><use href="#i-park"/></svg>
           <div>
-            <b>Парковка прямо у салона</b>
-            <p>Автомобиль можно оставить на парковке перед зданием — до входа буквально пара шагов.</p>
+            <div class="lbl">Парковка</div>
+            <div class="val">У здания — парковка для гостей<small>Удобно подъехать на автомобиле и зайти по пути</small></div>
           </div>
         </div>
-        <div class="contacts-map-link" data-reveal style="--d:.24s">
-          <a class="btn btn-dark" href="https://yandex.ru/maps/org/kare/95985406780/" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 20l-5.5-2.5V4L9 6.5 15 4l5.5 2.5V20L15 17.5 9 20z" stroke-linejoin="round"/><path d="M9 6.5v13.5M15 4v13.5" /></svg>
-            Построить маршрут в Яндекс Картах
-          </a>
+        <div class="contact-btns">
+          <button class="btn btn-primary" data-book>Записаться</button>
+          <a class="btn btn-ghost" href="https://yandex.ru/maps/org/kare/95985406780/" target="_blank" rel="noopener">Открыть в Яндекс Картах</a>
         </div>
       </div>
       <div class="contacts-photos">
-        <figure class="ph-a" data-reveal>
-          <div class="frame frame-hover"><img src="img/kare_photo09.jpg" alt="Здание ЖК Восток с салоном КАРЕ и парковкой перед входом" loading="lazy"></div>
-          <figcaption>Парковка перед салоном — видно с улицы</figcaption>
+        <figure>
+          <div class="frame-a">
+            <!-- @@PHOTO:facade@@ файл: kare_photo01.jpg | подпись: Вход в студию с вывеской и режимом работы -->
+            <img src="img/PHOTO_facade.jpg" alt="Фасад студии красоты Каре с вывеской">
+          </div>
+          <p class="photo-cap">Вход в студию с вывеской и режимом работы</p>
         </figure>
-        <figure class="ph-b" data-reveal style="--d:.1s">
-          <div class="frame frame-hover"><img src="img/kare_photo06.jpg" alt="Фасад студии КАРЕ с вывеской и списком услуг" loading="lazy"></div>
-          <figcaption>Узнаваемая вывеска — не пройдёте мимо</figcaption>
+        <figure>
+          <div class="frame-b">
+            <!-- @@PHOTO:parking@@ файл: kare_photo09.jpg | подпись: У здания — парковка: удобно приехать на автомобиле -->
+            <img src="img/PHOTO_parking.jpg" alt="Парковка перед зданием студии Каре">
+          </div>
+          <p class="photo-cap">У здания — парковка: удобно приехать на автомобиле</p>
         </figure>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<section class="cta-band">
+  <div class="wrap cta-in">
+    <h2>Подберём стрижку и оттенок, которые будут к лицу именно вам</h2>
+    <p>Оставьте заявку — администратор перезвонит, подберёт удобное время и подскажет по стоимости. Консультация мастера перед процедурой — бесплатно.</p>
+    <div class="btns">
+      <button class="btn btn-primary" data-book>Записаться</button>
+      <a class="btn btn-ghost" href="tel:+79212624308"><svg class="icon"><use href="#i-phone"/></svg>+7 (921) 262-43-08</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
 <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <span class="brand-name">КАРЕ</span>
-        <p class="footer-about">Студия красоты в Калининграде: стрижки для всей семьи, сложное окрашивание, завивка, маникюр и педикюр. Работаем ежедневно, по записи.</p>
-      </div>
-      <div>
-        <h4>Навигация</h4>
-        <nav aria-label="Нижняя навигация">
-          <a href="#studio">Студия</a>
-          <a href="#services">Услуги и цены</a>
-          <a href="#works">Работы мастеров</a>
-          <a href="#masters">Мастера</a>
-          <a href="#reviews">Отзывы</a>
-          <a href="#contacts">Контакты</a>
-        </nav>
-      </div>
-      <div>
-        <h4>Контакты</h4>
-        <ul>
-          <li><a href="tel:+79212624308" style="font-weight:700">+7 921 262-43-08</a></li>
-          <li>Калининград, ул. Виктора Денисова, 16 к1</li>
-          <li>Пн–сб 10:00–19:00 · вс 10:00–18:00</li>
-          <li><a href="https://yandex.ru/maps/org/kare/95985406780/" target="_blank" rel="noopener">Мы на Яндекс Картах</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span id="year">2025</span> Студия красоты «КАРЕ», Калининград</span>
-      <span>ИП · ИНН 391406558450</span>
-      <span>Информация на сайте не является публичной офертой</span>
-    </div>
+  <div class="wrap footer-in">
+    <span>Студия красоты «Каре», Калининград</span>
+    <span>Пн–Сб 10:00–19:00 · Вс 10:00–18:00</span>
+    <a href="tel:+79212624308">+7 (921) 262-43-08</a>
   </div>
 </footer>
 
-<!-- ================= MOBILE CALL BAR ================= -->
-<div class="callbar" role="region" aria-label="Быстрая связь">
-  <a class="btn btn-gold" href="tel:+79212624308">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C9.7 21 3 14.3 3 6a2 2 0 0 1 2-2z" stroke-linejoin="round"/></svg>
-    Позвонить
+<div class="stickybar">
+  <a class="call" href="tel:+79212624308" aria-label="Позвонить в студию Каре">
+    <svg class="icon"><use href="#i-phone"/></svg>
   </a>
-  <a class="btn btn-ghost-light" href="#booking">Записаться</a>
+  <button class="btn btn-light" data-book>Записаться</button>
 </div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Запись в студию">
+  <div class="modal-overlay" data-close></div>
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" data-close aria-label="Закрыть">
+      <svg class="icon"><use href="#i-close"/></svg>
+    </button>
+    <h3>Запись в «Каре»</h3>
+    <p class="m-sub">Оставьте заявку — администратор свяжется с вами, подтвердит время и стоимость услуги.</p>
+    <form id="bookForm" novalidate>
+      <div class="field">
+        <label for="fName">Ваше имя</label>
+        <input id="fName" name="name" type="text" placeholder="Как к вам обращаться" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="fPhone">Телефон</label>
+        <input id="fPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="fService">Услуга</label>
+        <select id="fService" name="service">
+          <option>Женская стрижка</option>
+          <option>Мужская стрижка</option>
+          <option>Детская стрижка</option>
+          <option>Сложное окрашивание</option>
+          <option>Прикорневой объём</option>
+          <option>Женская химзавивка</option>
+          <option>Маникюр</option>
+          <option>Педикюр</option>
+          <option>Ещё не решил(а) — нужна консультация</option>
+        </select>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="fDate">Дата</label>
+          <input id="fDate" name="date" type="date">
+        </div>
+        <div class="field">
+          <label for="fTime">Желаемое время</label>
+          <select id="fTime" name="time">
+            <option>Любое</option>
+            <option>10:00</option><option>11:00</option><option>12:00</option>
+            <option>13:00</option><option>14:00</option><option>15:00</option>
+            <option>16:00</option><option>17:00</option><option>18:00</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Отправить заявку</button>
+      <p class="modal-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+    </form>
+    <div class="form-success">
+      <svg class="icon"><use href="#i-check"/></svg>
+      <h4>Заявка отправлена</h4>
+      <p>Спасибо! Администратор студии свяжется с вами, чтобы подтвердить запись и подсказать по стоимости.</p>
+    </div>
+  </div>
+</div>
+
+<!-- @@METRIKA@@ -->
 
 <script>
 (function(){
-  "use strict";
-  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var modal = document.getElementById('modal');
+  var box = document.getElementById('modalBox');
+  var serviceSel = document.getElementById('fService');
+  var dateInput = document.getElementById('fDate');
+  var form = document.getElementById('bookForm');
 
-  /* header state */
-  var siteHeader = document.getElementById("siteHeader");
-  function onScrollHeader(){
-    if(window.scrollY > 24){ siteHeader.classList.add("scrolled"); }
-    else{ siteHeader.classList.remove("scrolled"); }
+  var today = new Date();
+  var iso = today.getFullYear() + '-' + String(today.getMonth()+1).padStart(2,'0') + '-' + String(today.getDate()).padStart(2,'0');
+  dateInput.min = iso;
+
+  function openModal(service){
+    if(service){
+      for(var i=0;i<serviceSel.options.length;i++){
+        if(serviceSel.options[i].text === service){ serviceSel.selectedIndex = i; break; }
+      }
+    }
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
   }
-  window.addEventListener("scroll", onScrollHeader, {passive:true});
-  onScrollHeader();
-
-  /* mobile menu */
-  var burgerBtn = document.getElementById("burgerBtn");
-  var mMenu = document.getElementById("mMenu");
-  function setMenu(open){
-    document.documentElement.classList.toggle("m-open", open);
-    burgerBtn.setAttribute("aria-expanded", open ? "true" : "false");
-    burgerBtn.setAttribute("aria-label", open ? "Закрыть меню" : "Открыть меню");
-    mMenu.setAttribute("aria-hidden", open ? "false" : "true");
-    document.body.style.overflow = open ? "hidden" : "";
-    if(open && window.scrollY > 24){ siteHeader.classList.add("scrolled"); }
-  }
-  burgerBtn.addEventListener("click", function(){
-    setMenu(!document.documentElement.classList.contains("m-open"));
-  });
-  mMenu.querySelectorAll("a").forEach(function(link){
-    link.addEventListener("click", function(){ setMenu(false); });
-  });
-
-  /* reveal on scroll */
-  var revealEls = document.querySelectorAll("[data-reveal]");
-  if(reduced || !("IntersectionObserver" in window)){
-    revealEls.forEach(function(el){ el.classList.add("is-in"); });
-  }else{
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          entry.target.classList.add("is-in");
-          io.unobserve(entry.target);
-        }
-      });
-    }, {threshold:.12, rootMargin:"0px 0px -6% 0px"});
-    revealEls.forEach(function(el){ io.observe(el); });
+  function closeModal(){
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
   }
 
-  /* rail arrows */
-  document.querySelectorAll(".rail-btn").forEach(function(btn){
-    btn.addEventListener("click", function(){
-      var rail = document.querySelector(btn.getAttribute("data-rail"));
-      if(!rail) return;
-      var cardW = rail.firstElementChild.getBoundingClientRect().width;
-      var dir = parseInt(btn.getAttribute("data-dir"), 10) || 1;
-      rail.scrollBy({left: dir * (cardW + 20), behavior: reduced ? "auto" : "smooth"});
+  document.querySelectorAll('[data-book]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      openModal(btn.getAttribute('data-service') || '');
     });
   });
-
-  /* drag-to-scroll for rails (mouse) */
-  document.querySelectorAll(".rail").forEach(function(railEl){
-    var dragging = false, startX = 0, startLeft = 0;
-    railEl.addEventListener("pointerdown", function(e){
-      if(e.pointerType !== "mouse") return;
-      dragging = true;
-      startX = e.clientX;
-      startLeft = railEl.scrollLeft;
-      railEl.setPointerCapture(e.pointerId);
-    });
-    railEl.addEventListener("pointermove", function(e){
-      if(!dragging) return;
-      railEl.scrollLeft = startLeft - (e.clientX - startX);
-    });
-    ["pointerup","pointercancel","pointerleave"].forEach(function(evName){
-      railEl.addEventListener(evName, function(){ dragging = false; });
-    });
+  modal.querySelectorAll('[data-close]').forEach(function(el){
+    el.addEventListener('click', closeModal);
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('open')) closeModal();
   });
 
-  /* booking form */
-  var bookingForm = document.getElementById("bookingForm");
-  var formWrap = document.getElementById("formWrap");
-  if(bookingForm){
-    bookingForm.addEventListener("submit", function(e){
-      e.preventDefault();
-      var nameField = document.getElementById("fName");
-      var phoneField = document.getElementById("fPhone");
-      var ok = true;
-      [nameField, phoneField].forEach(function(input){ input.parentElement.classList.remove("err"); });
-      if(nameField.value.trim().length < 2){ nameField.parentElement.classList.add("err"); ok = false; }
-      var digits = phoneField.value.replace(/\D/g, "");
-      if(digits.length < 10){ phoneField.parentElement.classList.add("err"); ok = false; }
-      if(!ok) return;
-      formWrap.classList.add("sent");
-      formWrap.scrollIntoView({behavior: reduced ? "auto" : "smooth", block:"center"});
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('fName');
+    var phone = document.getElementById('fPhone');
+    var ok = true;
+    [name, phone].forEach(function(inp){
+      if(!inp.value.trim()){ ok = false; inp.style.borderColor = '#c2867b'; }
+      else { inp.style.borderColor = ''; }
     });
-  }
-
-  /* year */
-  var yearEl = document.getElementById("year");
-  if(yearEl){ yearEl.textContent = String(new Date().getFullYear()); }
+    var digits = phone.value.replace(/\D/g,'');
+    if(phone.value.trim() && digits.length < 10){ ok = false; phone.style.borderColor = '#c2867b'; }
+    if(!ok) return;
+    box.classList.add('sent');
+  });
 })();
 </script>
+
 </body>
 </html>
