@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>КАРЕ — студия красоты в Калининграде | Стрижки, окрашивание, маникюр</title>
+<meta name="description" content="Студия красоты «Каре» в Калининграде: женские и мужские стрижки, детские стрижки, сложные окрашивания, маникюр и педикюр. Онлайн-запись. Ул. Виктора Денисова, 16 к1.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<style>
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/playfair-display-cyrillic-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/playfair-display-cyrillic-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:600;font-display:swap;src:url(fonts/playfair-display-cyrillic-600-italic.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/playfair-display-cyrillic-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/playfair-display-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/playfair-display-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:600;font-display:swap;src:url(fonts/playfair-display-latin-600-italic.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/playfair-display-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/manrope-cyrillic-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/manrope-cyrillic-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/manrope-cyrillic-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/manrope-cyrillic-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/manrope-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/manrope-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/manrope-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/manrope-latin-700-normal.woff2) format('woff2')}
+
+:root{
+  --ink:#171209;
+  --ink-2:#221a10;
+  --paper:#f6f0e3;
+  --paper-2:#efe6d2;
+  --card:#fffdf6;
+  --gold:#c9a24a;
+  --gold-l:#e0c070;
+  --gold-d:#a17b28;
+  --line:rgba(23,18,9,.12);
+  --line-gold:rgba(201,162,74,.35);
+  --mut:#6f6453;
+  --mut-l:#b3a892;
+  --shadow:0 24px 60px rgba(23,18,9,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+html,body{overflow-x:clip}
+body{
+  font-family:'Manrope',system-ui,-apple-system,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+body.lock{overflow:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button{font-family:inherit}
+.container{width:100%;max-width:1180px;margin-inline:auto;padding-inline:22px}
+@media (max-width:640px){.container{padding-inline:18px}  .hero__content{padding-left:20px;padding-right:20px}
+}
+.ic{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ic--fill{fill:currentColor;stroke:none}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:50px;padding:12px 28px;border-radius:999px;
+  font-weight:700;font-size:15px;letter-spacing:.02em;line-height:1.1;
+  text-decoration:none;cursor:pointer;border:1px solid transparent;
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn--gold{
+  background:linear-gradient(135deg,#e2c172 0%,#c9983a 55%,#b3831f 100%);
+  color:#191204;box-shadow:0 14px 34px rgba(179,131,31,.35);
+}
+.btn--gold:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(179,131,31,.45)}
+.btn--ghost{border-color:rgba(246,240,227,.45);color:#f6f0e3;background:rgba(246,240,227,.04)}
+.btn--ghost:hover{border-color:var(--gold-l);color:var(--gold-l);background:rgba(201,162,74,.08)}
+.btn--line{border-color:var(--line-gold);color:var(--ink);background:transparent}
+.btn--line:hover{background:rgba(201,162,74,.12);border-color:var(--gold)}
+.btn--sm{min-height:46px;padding:10px 22px;font-size:14px}
+.btn--full{width:100%}
+.btn .ic{width:18px;height:18px}
+
+/* ---------- Header ---------- */
+.header{
+  position:fixed;inset:0 0 auto 0;z-index:120;
+  background:linear-gradient(180deg,rgba(17,12,7,.82),rgba(17,12,7,.35));
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  transition:background .35s ease,box-shadow .35s ease;
+}
+.header.scrolled{background:rgba(19,14,8,.94);box-shadow:0 10px 40px rgba(0,0,0,.3)}
+.header__inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:74px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo__mark{
+  width:42px;height:42px;border-radius:50%;flex:none;
+  border:1px solid var(--gold-l);display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:22px;color:var(--gold-l);font-weight:600;
+  background:radial-gradient(circle at 30% 25%,rgba(224,192,112,.22),transparent 70%);
+}
+.logo__text{display:flex;flex-direction:column;line-height:1.05}
+.logo__text b{font-family:'Playfair Display',serif;font-size:20px;letter-spacing:.32em;color:#f6f0e3;font-weight:600}
+.logo__text span{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--mut-l)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{
+  text-decoration:none;color:#e9e0cd;font-size:14.5px;font-weight:600;letter-spacing:.04em;
+  padding:8px 2px;position:relative;transition:color .25s;
+}
+.nav a::after{content:'';position:absolute;left:0;bottom:2px;height:1.5px;width:100%;background:var(--gold-l);transform:scaleX(0);transform-origin:right;transition:transform .3s ease}
+.nav a:hover{color:var(--gold-l)}
+.nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.header__right{display:flex;align-items:center;gap:18px}
+.header__phone{display:flex;align-items:center;gap:9px;text-decoration:none;color:#f0e8d6;font-weight:700;font-size:14.5px;transition:color .25s}
+.header__phone:hover{color:var(--gold-l)}
+.header__phone .ic{width:17px;height:17px;color:var(--gold-l)}
+.burger{
+  display:none;width:48px;height:48px;border-radius:12px;border:1px solid rgba(246,240,227,.28);
+  background:rgba(246,240,227,.06);cursor:pointer;position:relative;z-index:170;
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  transition:border-color .25s;
+}
+.burger:hover{border-color:var(--gold-l)}
+.burger span{display:block;width:22px;height:2px;background:#f0e8d6;border-radius:2px;transition:transform .3s ease,opacity .3s ease}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- Mobile menu ---------- */
+.mnav{
+  position:fixed;inset:0;z-index:110;background:rgba(16,11,6,.97);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:100px 28px 44px;opacity:0;transform:translateY(-10px);
+  pointer-events:none;transition:opacity .35s ease,transform .35s ease;
+}
+.mnav.open{opacity:1;transform:none;pointer-events:auto}
+.mnav a{
+  display:block;text-decoration:none;color:#f0e8d6;
+  font-family:'Playfair Display',serif;font-size:30px;font-weight:500;
+  padding:13px 4px;border-bottom:1px solid rgba(246,240,227,.08);
+  transition:color .25s,padding-left .25s;
+}
+.mnav a:hover{color:var(--gold-l);padding-left:10px}
+.mnav__foot{margin-top:34px;display:flex;flex-direction:column;gap:16px}
+.mnav__phone{display:flex;align-items:center;gap:10px;color:var(--gold-l);text-decoration:none;font-weight:700;font-size:17px}
+
+@media (max-width:959px){
+  .nav,.header__phone{display:none}
+  .burger{display:flex}
+  html{scroll-padding-top:84px}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;color:#f6f0e3}
+.hero__bg{position:absolute;inset:0;overflow:hidden;z-index:0}
+.hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 32%;animation:heroZoom 14s ease-out forwards}
+@keyframes heroZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero__bg::after{
+  content:'';position:absolute;inset:0;
+  background:
+    linear-gradient(100deg,rgba(15,10,5,.9) 6%,rgba(15,10,5,.62) 48%,rgba(15,10,5,.3) 100%),
+    linear-gradient(0deg,rgba(15,10,5,.62) 0%,transparent 42%);
+}
+.hero__content{position:relative;z-index:2;flex:1;display:flex;align-items:center;width:100%;max-width:1200px;margin:0 auto;padding:118px 24px 42px}
+.hero__box{max-width:720px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--gold-l);margin-bottom:20px;
+}
+.eyebrow::before{content:'';width:36px;height:1px;background:currentColor;flex:none}
+.hero h1{
+  font-family:'Playfair Display',serif;font-weight:500;
+  font-size:clamp(34px,5.6vw,64px);line-height:1.12;letter-spacing:.005em;
+}
+.hero h1 em{font-style:italic;color:var(--gold-l)}
+.hero__sub{margin-top:20px;font-size:clamp(15px,1.6vw,18px);color:#ddd3bf;max-width:560px}
+.hero__facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.fact{
+  display:inline-flex;align-items:center;gap:9px;min-height:44px;
+  padding:9px 17px;border-radius:999px;border:1px solid rgba(246,240,227,.22);
+  background:rgba(246,240,227,.06);backdrop-filter:blur(6px);
+  font-size:13.5px;font-weight:600;color:#efe7d5;
+}
+.fact .ic{width:17px;height:17px;color:var(--gold-l)}
+.hero__cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:32px}
+.hero__call{display:flex;flex-direction:column;text-decoration:none;line-height:1.25}
+.hero__call small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut-l)}
+.hero__call b{font-size:17px;color:#f6f0e3;font-weight:700}
+.hero__call:hover b{color:var(--gold-l)}
+
+/* ---------- Ticker ---------- */
+.ticker{position:relative;z-index:3;background:linear-gradient(90deg,#dcbd6d,#c2923a 55%,#d8b45e);overflow:hidden;border-top:1px solid rgba(255,255,255,.35);padding-inline:16px}
+.ticker__track{display:flex;width:max-content;animation:tick 34s linear infinite}
+.ticker:hover .ticker__track{animation-play-state:paused}
+.ticker__group{display:flex;align-items:center;white-space:nowrap;padding:13px 0;font-size:12.5px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#1b1305}
+.ticker__group span{padding:0 15px}
+.t-dot{width:6px;height:6px;background:rgba(27,19,5,.55);transform:rotate(45deg);flex:none;margin:0 13px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ---------- Sections common ---------- */
+.section{padding:96px 0}
+@media (max-width:760px){.section{padding:66px 0}}
+.sec-head{max-width:680px;margin-bottom:48px}
+.sec-head h2{
+  font-family:'Playfair Display',serif;font-weight:600;
+  font-size:clamp(28px,4vw,44px);line-height:1.16;margin-top:14px;
+}
+.sec-head p{margin-top:14px;color:var(--mut);font-size:16px}
+.eyebrow--dark{color:var(--gold-d)}
+
+/* ---------- About ---------- */
+.about{background:var(--paper)}
+.about__grid{display:grid;grid-template-columns:1.02fr .98fr;gap:60px;align-items:center}
+.about__text p{color:#4c4335;font-size:16.5px;margin-top:16px}
+.about__text p:first-of-type{margin-top:22px}
+.about__list{margin-top:28px;display:flex;flex-direction:column;gap:13px}
+.about__list li{display:flex;gap:13px;align-items:flex-start;list-style:none;font-weight:600;font-size:15.5px;color:#383021}
+.about__list .ic{width:21px;height:21px;color:var(--gold-d);margin-top:2px}
+.about__facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:34px}
+.afact{border:1px solid var(--line);background:var(--card);border-radius:16px;padding:18px 20px}
+.afact b{font-family:'Playfair Display',serif;font-size:30px;font-weight:600;color:var(--ink);display:block;line-height:1.1}
+.afact b i{font-style:normal;color:var(--gold-d)}
+.afact span{font-size:13px;color:var(--mut);font-weight:600}
+.about__media{position:relative;padding:0 0 74px 0}
+.about__main{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
+.about__main img{width:100%;aspect-ratio:4/4.6;object-fit:cover;transition:transform .9s ease}
+.about__media:hover .about__main img{transform:scale(1.04)}
+.about__sub{
+  position:absolute;left:-26px;bottom:0;width:56%;border-radius:18px;overflow:hidden;
+  border:6px solid var(--paper);box-shadow:var(--shadow);transform:rotate(-2.5deg);
+}
+.about__sub img{width:100%;aspect-ratio:16/11;object-fit:cover}
+.about__badge{
+  position:absolute;right:-14px;top:-16px;z-index:2;
+  background:linear-gradient(135deg,#e2c172,#b3831f);color:#191204;
+  border-radius:16px;padding:15px 20px;text-align:center;box-shadow:0 16px 34px rgba(179,131,31,.4);
+  transform:rotate(3deg);
+}
+.about__badge b{font-family:'Playfair Display',serif;font-size:28px;display:block;line-height:1}
+.about__badge span{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+@media (max-width:959px){
+  .about__grid{grid-template-columns:1fr;gap:46px}
+  .about__media{max-width:520px;margin-inline:auto;padding:0 0 60px 0}
+  .about__sub{left:-8px}
+  .about__badge{right:-4px}
+}
+
+/* ---------- Services ---------- */
+.services{background:linear-gradient(180deg,#141008 0%,#1c150b 100%);color:#f0e8d5;position:relative;overflow:hidden}
+.services::before{
+  content:'';position:absolute;top:-220px;right:-160px;width:640px;height:640px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,162,74,.16),transparent 65%);pointer-events:none;
+}
+.services .sec-head p{color:#a99c82}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{
+  position:relative;background:rgba(246,240,227,.035);border:1px solid rgba(224,192,112,.18);
+  border-radius:20px;padding:30px 28px;display:flex;flex-direction:column;gap:12px;
+  transition:transform .35s ease,border-color .35s ease,background .35s ease;cursor:pointer;
+}
+.svc:hover{transform:translateY(-5px);border-color:rgba(224,192,112,.55);background:rgba(246,240,227,.06)}
+.svc__ic{
+  width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,rgba(224,192,112,.2),rgba(201,162,74,.06));
+  border:1px solid rgba(224,192,112,.35);color:var(--gold-l);
+}
+.svc__ic .ic{width:25px;height:25px}
+.svc h3{font-family:'Playfair Display',serif;font-weight:600;font-size:21px;color:#f6f0e3}
+.svc p{font-size:14.5px;color:#a99c82;flex:1}
+.svc__row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:8px;flex-wrap:wrap}
+.svc__price{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--gold-l)}
+.services__note{
+  margin-top:22px;font-size:13.5px;color:#8d8168;display:flex;gap:9px;align-items:flex-start;max-width:760px;
+}
+.services__note .ic{width:17px;height:17px;margin-top:3px;color:var(--gold-d)}
+.svc-cta{
+  margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;
+  border:1px solid rgba(224,192,112,.28);border-radius:22px;padding:30px 34px;
+  background:radial-gradient(circle at 12% 20%,rgba(201,162,74,.12),transparent 60%);
+}
+.svc-cta h3{font-family:'Playfair Display',serif;font-size:clamp(20px,2.6vw,27px);font-weight:600;color:#f6f0e3}
+.svc-cta p{color:#a99c82;font-size:15px;margin-top:6px}
+.svc-cta__btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.svc-cta .callink{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;color:var(--gold-l);min-height:50px;padding:0 8px;font-size:16px}
+.svc-cta .callink:hover{color:#f0d795}
+@media (max-width:959px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.svc-grid{grid-template-columns:1fr}}
+
+/* ---------- Works ---------- */
+.works{background:var(--paper)}
+.works-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.work{position:relative;border-radius:18px;overflow:hidden;cursor:default;background:#111}
+.work img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .9s ease}
+.work:hover img{transform:scale(1.06)}
+.work figcaption{
+  position:absolute;inset:auto 0 0 0;padding:44px 18px 16px;
+  background:linear-gradient(0deg,rgba(12,8,3,.86) 0%,rgba(12,8,3,.42) 62%,transparent 100%);
+  color:#f6f0e3;
+}
+.work__tag{
+  display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold-l);border:1px solid rgba(224,192,112,.5);border-radius:999px;padding:4px 11px;margin-bottom:9px;
+}
+.work figcaption b{display:block;font-family:'Playfair Display',serif;font-weight:500;font-size:16.5px;line-height:1.3}
+.works-foot{margin-top:26px;text-align:center;color:var(--mut);font-size:14px}
+@media (max-width:959px){.works-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.works-grid{grid-template-columns:repeat(2,1fr);gap:12px}}
+
+/* ---------- Masters ---------- */
+.masters{background:var(--paper-2)}
+.masters-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:980px}
+.master{
+  background:var(--card);border:1px solid var(--line);border-radius:22px;padding:36px 34px;
+  box-shadow:0 18px 44px rgba(23,18,9,.08);position:relative;
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+.master:hover{transform:translateY(-5px);box-shadow:0 26px 54px rgba(23,18,9,.14)}
+.master::before{
+  content:'\201C';position:absolute;top:-6px;right:16px;font-family:'Playfair Display',serif;
+  font-size:150px;line-height:1;color:rgba(201,162,74,.18);pointer-events:none;
+}
+.master__top{display:flex;align-items:center;gap:18px;margin-bottom:18px}
+.avatar{
+  width:66px;height:66px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:#f6f0e3;
+  border:2px solid var(--gold-l);
+}
+.av-1{background:linear-gradient(135deg,#8a5f1d,#4d3410)}
+.av-2{background:linear-gradient(135deg,#3a3427,#191408)}
+.av-3{background:linear-gradient(135deg,#b0872f,#6d4e15)}
+.av-4{background:linear-gradient(135deg,#5c4a2e,#2c2110)}
+.av-5{background:linear-gradient(135deg,#94742f,#3d2c0d)}
+.av-6{background:linear-gradient(135deg,#454034,#171209)}
+.master__top h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:600}
+.master__top span{display:block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d);margin-top:3px}
+.master q{font-size:15.5px;color:#4c4335;font-style:italic;quotes:'\201C' '\201D'}
+.master__exp{
+  display:inline-flex;align-items:center;gap:8px;margin-top:20px;flex-wrap:wrap;padding:9px 16px;border-radius:999px;
+  background:rgba(201,162,74,.13);border:1px solid var(--line-gold);font-size:13px;font-weight:700;color:#6d5420;min-height:44px;
+}
+.master__exp .ic{width:16px;height:16px}
+.master__src{margin-top:14px;font-size:12px;color:var(--mut)}
+@media (max-width:760px){.masters-grid{grid-template-columns:1fr}}
+
+/* ---------- Reviews ---------- */
+.reviews{background:#141008;color:#efe7d5;position:relative;overflow:hidden}
+.reviews::before{
+  content:'';position:absolute;bottom:-260px;left:-180px;width:680px;height:680px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,162,74,.13),transparent 65%);pointer-events:none;
+}
+.reviews .sec-head p{color:#a99c82}
+.rev-rating{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap}
+.rev-rating__num{font-family:'Playfair Display',serif;font-size:34px;color:var(--gold-l);font-weight:600}
+.stars{display:flex;gap:3px}
+.stars .ic{width:17px;height:17px;color:var(--gold-l)}
+.stars .ic--off{color:rgba(224,192,112,.28)}
+.rev-rating small{font-size:13px;color:#8d8168}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{
+  background:rgba(246,240,227,.04);border:1px solid rgba(224,192,112,.16);
+  border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:14px;
+  transition:border-color .3s ease,transform .3s ease;
+}
+.rev:hover{border-color:rgba(224,192,112,.45);transform:translateY(-3px)}
+.rev__head{display:flex;align-items:center;gap:13px}
+.avatar--s{width:50px;height:50px;font-size:20px}
+.rev__head b{display:block;font-size:15.5px;color:#f6f0e3}
+.rev__head span{font-size:12.5px;color:#8d8168}
+.rev p{font-size:14.5px;color:#cfc4ac;flex:1}
+.rev__foot{display:flex;align-items:center;gap:8px;font-size:12px;color:#8d8168;border-top:1px solid rgba(246,240,227,.08);padding-top:13px}
+.rev__foot .ic{width:14px;height:14px;color:var(--gold-l)}
+@media (max-width:959px){.rev-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.rev-grid{grid-template-columns:1fr}}
+
+/* ---------- Contacts ---------- */
+.contacts{background:var(--paper)}
+.contacts-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:46px;align-items:start}
+.cinfo{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:36px 34px;box-shadow:0 18px 44px rgba(23,18,9,.08)}
+.cinfo__row{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid rgba(23,18,9,.07)}
+.cinfo__row:last-of-type{border-bottom:none}
+.cinfo__ic{
+  width:46px;height:46px;border-radius:13px;flex:none;display:flex;align-items:center;justify-content:center;
+  background:rgba(201,162,74,.13);border:1px solid var(--line-gold);color:var(--gold-d);
+}
+.cinfo__row small{display:block;font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.cinfo__row b{font-size:15.5px;font-weight:700;color:#2c2413;line-height:1.45}
+.cinfo__row a{color:#2c2413;text-decoration:none}
+.cinfo__row a:hover{color:var(--gold-d)}
+.cinfo__btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.contacts__media{display:grid;grid-template-columns:1fr;gap:18px}
+.contacts__media figure{border-radius:20px;overflow:hidden;position:relative;border:1px solid var(--line);box-shadow:var(--shadow)}
+.contacts__media img{width:100%;object-fit:cover;transition:transform .9s ease}
+.contacts__media .ph-a img{aspect-ratio:16/9.4}
+.contacts__media .ph-b img{aspect-ratio:16/7.2}
+.contacts__media figure:hover img{transform:scale(1.04)}
+.contacts__media figcaption{
+  position:absolute;inset:auto 0 0 0;padding:34px 20px 14px;color:#f6f0e3;
+  background:linear-gradient(0deg,rgba(12,8,3,.82),transparent 100%);font-size:13.5px;font-weight:600;
+  display:flex;align-items:center;gap:9px;
+}
+.contacts__media figcaption .ic{width:16px;height:16px;color:var(--gold-l)}
+.route-link{display:inline-flex;align-items:center;gap:9px;margin-top:18px;font-weight:700;color:var(--gold-d);text-decoration:none;min-height:44px}
+.route-link:hover{color:#7c5c15}
+.route-link .ic{width:17px;height:17px}
+@media (max-width:959px){.contacts-grid{grid-template-columns:1fr}}
+
+/* ---------- Footer ---------- */
+.footer{background:#110c06;color:#8d8168;padding:38px 0}
+.footer__inner{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.footer .logo__text b{color:#efe7d5;font-size:17px}
+.footer p{font-size:13px;line-height:1.6}
+.footer__legal{text-align:right}
+@media (max-width:640px){.footer__legal{text-align:left}}
+
+/* ---------- Modal ---------- */
+.modal{
+  position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;
+  padding:18px;background:rgba(10,7,3,.68);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
+  opacity:0;pointer-events:none;transition:opacity .3s ease;
+}
+.modal.open{opacity:1;pointer-events:auto}
+.modal__panel{
+  width:100%;max-width:900px;max-height:calc(100svh - 28px);overflow-y:auto;
+  background:#f7f1e4;border-radius:24px;display:grid;grid-template-columns:.9fr 1.15fr;
+  box-shadow:0 40px 100px rgba(0,0,0,.5);transform:translateY(18px) scale(.98);transition:transform .35s ease;
+  position:relative;
+}
+.modal.open .modal__panel{transform:none}
+.modal__close{
+  position:absolute;top:14px;right:14px;z-index:5;width:46px;height:46px;border-radius:50%;
+  border:1px solid var(--line);background:rgba(255,253,246,.9);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;color:var(--ink);transition:background .25s,transform .25s;
+}
+.modal__close:hover{background:#fff;transform:rotate(90deg)}
+.modal__close .ic{width:19px;height:19px}
+.modal__side{
+  background:linear-gradient(165deg,#1c150b,#110c06);color:#efe7d5;padding:42px 34px;
+  display:flex;flex-direction:column;gap:18px;border-radius:24px 0 0 24px;
+}
+.modal__side .eyebrow{margin-bottom:0}
+.modal__side h3{font-family:'Playfair Display',serif;font-size:27px;font-weight:600;color:#f6f0e3;line-height:1.2}
+.modal__side>p{font-size:14px;color:#a99c82}
+.modal__phone{
+  display:flex;align-items:center;gap:14px;text-decoration:none;margin-top:auto;
+  border:1px solid rgba(224,192,112,.35);border-radius:16px;padding:16px 18px;
+  background:rgba(224,192,112,.07);transition:border-color .25s,background .25s;
+}
+.modal__phone:hover{border-color:var(--gold-l);background:rgba(224,192,112,.13)}
+.modal__phone .ic{width:22px;height:22px;color:var(--gold-l)}
+.modal__phone b{display:block;font-size:18px;color:#f6f0e3;letter-spacing:.02em}
+.modal__phone span{font-size:12px;color:#8d8168}
+.modal__form{padding:42px 36px 34px}
+.modal__form h4{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;margin-bottom:20px}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field--full{grid-column:1/-1}
+.field label{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.field input,.field select,.field textarea{
+  width:100%;min-height:48px;padding:11px 15px;border-radius:13px;font-family:inherit;font-size:15px;
+  border:1px solid rgba(23,18,9,.18);background:#fffdf6;color:var(--ink);outline:none;
+  transition:border-color .25s,box-shadow .25s;appearance:none;
+}
+.field select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' stroke='%23a17b28' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 16px center;padding-right:40px;
+}
+.field textarea{resize:vertical;min-height:74px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,74,.22)}
+.field.err input{border-color:#b3372e;box-shadow:0 0 0 3px rgba(179,55,46,.14)}
+.field__err{display:none;font-size:12px;color:#b3372e;font-weight:600}
+.field.err .field__err{display:block}
+.modal__submit{margin-top:20px}
+.modal__agree{margin-top:13px;font-size:11.5px;color:var(--mut);text-align:center}
+.modal__success{display:none;padding:48px 36px;text-align:center;grid-column:1/-1}
+.modal__success.show{display:block}
+.modal__success .ok{
+  width:84px;height:84px;margin:0 auto 22px;border-radius:50%;
+  background:linear-gradient(135deg,#e2c172,#b3831f);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 18px 44px rgba(179,131,31,.4);
+}
+.modal__success .ok .ic{width:38px;height:38px;color:#191204;stroke-width:2.4}
+.modal__success h3{font-family:'Playfair Display',serif;font-size:27px;font-weight:600;margin-bottom:10px}
+.modal__success p{color:var(--mut);max-width:420px;margin:0 auto}
+.modal__success .btn{margin-top:26px}
+@media (max-width:760px){
+  .modal{padding:10px}
+  .modal__panel{grid-template-columns:1fr;max-height:calc(100svh - 12px);border-radius:18px}
+  .modal__side{display:none}
+  .modal__form{padding:20px 18px 20px}
+  .modal__phone{margin-top:0;margin-bottom:12px;padding:10px 13px;border-radius:12px;display:flex}
+  .modal__phone b{font-size:16px}
+  .modal__phone span{font-size:11px}
+  .modal__phone .ic{width:19px;height:19px}
+  .modal__form h4{margin-bottom:14px;font-size:18px}
+  .f-grid{grid-template-columns:1fr;gap:10px}
+  .field input,.field select,.field textarea{min-height:44px;padding:9px 13px;font-size:14px;border-radius:11px}
+  .field textarea{min-height:60px}
+  .field label{font-size:11px}
+  .modal__submit{margin-top:14px}
+  .modal__agree{margin-top:10px;font-size:10.5px}
+}
+
+/* ---------- Reveal ---------- */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .ticker__track{animation:none}
+  .hero__bg img{animation:none}
+  *{transition-duration:.01ms !important}
+}
+
+/* ===== Демо-плашка (эталон Виктории, адапт. под палитру v5) ===== */
+.demo-ribbon{position:fixed;top:0;left:0;right:0;z-index:130;display:flex;align-items:center;justify-content:center;gap:16px;background:#1c150d;border-bottom:1px solid rgba(216,176,120,.45);padding:10px 16px;color:#efe9da;max-width:100vw;box-sizing:border-box}
+.demo-label{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.demo-label .dl-sub{color:rgba(246,240,228,.65);font-weight:600}
+.demo-label .dl-love{color:var(--gold,#d8b078)}
+.demo-remove{background:transparent;border:1px solid rgba(216,176,120,.55);color:var(--gold,#d8b078);border-radius:999px;padding:6px 16px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit}
+.demo-remove:hover{background:rgba(216,176,120,.15)}
+body.demo-off .demo-ribbon{display:none}
+.header{top:44px !important}
+body.demo-off .header{top:0 !important}
+@media(max-width:680px){.demo-label{font-size:10.5px;letter-spacing:.12em}.demo-label .dl-sub{display:none}.demo-remove{padding:5px 10px;font-size:11px}}
+/* ===== Подпись created by ALTAVALTA ===== */
+@font-face{font-family:'Jost';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/jost-700.woff2) format('woff2')}
+.footer-brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:18px;padding-top:14px;border-top:1px solid rgba(216,176,120,.22);flex-wrap:wrap}
+.brand-made{color:var(--mut,#9a8f80);font-size:9.5px;font-weight:500;letter-spacing:.24em;text-transform:lowercase}
+.brand-link{display:inline-flex;align-items:center;text-decoration:none;transition:opacity .3s}
+.brand-link:hover{opacity:.8}
+.sig-name{display:inline-flex;font-family:'Jost',sans-serif;color:var(--ink-soft,#d8d2c2);font-size:12px;font-weight:700;gap:.08em;text-transform:uppercase;line-height:1}
+.sig-name b{font-weight:inherit}
+.brand-core{color:var(--gold,#d8b078);animation:v-pulse-brand 2.8s ease-in-out infinite}
+@keyframes v-pulse-brand{0%,68%{color:var(--gold,#d8b078);text-shadow:0 0 0 rgba(245,217,168,0)}100%{color:#f5d9a8;text-shadow:0 0 10px rgba(245,217,168,.65)}}
+
+</style>
+</head>
+<body>
+<div class="demo-ribbon" id="demoRibbon" role="note">
+  <span class="demo-label"><b>Демо-версия</b><span class="dl-sub">сделано для вас </span><b class="dl-love">с любовью</b></span>
+  <button type="button" class="demo-remove" id="demoRemove">Убрать метку</button>
+</div>
+
+<!-- SVG icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.8"/><circle cx="6" cy="18" r="2.8"/><path d="M8.5 7.6 20 18.4M8.5 16.4 20 5.6M13.2 12l1.6 1.5"/></symbol>
+  <symbol id="i-color" viewBox="0 0 24 24"><path d="M12 3s6 6.4 6 10.6a6 6 0 1 1-12 0C6 9.4 12 3 12 3z"/><path d="M9.4 14.2a2.6 2.6 0 0 0 2.6 2.6"/></symbol>
+  <symbol id="i-kid" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3.2"/><path d="M5.4 21c.8-4.1 3.3-6.1 6.6-6.1s5.8 2 6.6 6.1"/><path d="M12 3.8V2.4"/></symbol>
+  <symbol id="i-polish" viewBox="0 0 24 24"><path d="M10 2.5h4V8h-4z"/><path d="M9.6 8h4.8a3.6 3.6 0 0 1 3.6 3.6V19a2.4 2.4 0 0 1-2.4 2.4H8.4A2.4 2.4 0 0 1 6 19v-7.4A3.6 3.6 0 0 1 9.6 8z"/><path d="M9.6 12.5v4"/></symbol>
+  <symbol id="i-spa" viewBox="0 0 24 24"><path d="M12 4c1.9 2.1 2.8 4.1 2.8 6 0 2-1.1 3.4-2.8 4-1.7-.6-2.8-2-2.8-4 0-1.9.9-3.9 2.8-6z"/><path d="M4.6 9.3c2.4.3 4.3 1.3 5.6 3.1M19.4 9.3c-2.4.3-4.3 1.3-5.6 3.1"/><path d="M5 16.4c1.5 2.7 4 4.1 7 4.1s5.5-1.4 7-4.1"/></symbol>
+  <symbol id="i-parking" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M9.5 17V7h3.6a3 3 0 0 1 0 6H9.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2.2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s-7-5.6-7-11.2a7 7 0 0 1 14 0c0 5.6-7 11.2-7 11.2z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.8 3.5c.6 0 1.2.4 1.5 1l1.1 2.4c.3.6.1 1.3-.4 1.8l-1.2 1.1a13.4 13.4 0 0 0 6.4 6.4l1.1-1.2c.5-.5 1.2-.7 1.8-.4l2.4 1.1c.6.3 1 .9 1 1.5v2c0 .9-.7 1.6-1.6 1.5C9.9 20 4 14.1 3.3 5.1c-.1-.9.6-1.6 1.5-1.6z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.3L12 17.1l-5.7 3.1 1.2-6.3L2.8 9.5l6.4-.8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.6l5 5L19.5 7"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13.5 6l6 6-6 6"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M5.4 11.2 6.6 7.6A2 2 0 0 1 8.5 6.2h7a2 2 0 0 1 1.9 1.4l1.2 3.6M4 16.6v-3.2a2.2 2.2 0 0 1 2.2-2.2h11.6a2.2 2.2 0 0 1 2.2 2.2v3.2"/><path d="M4 16.6h16v2.6a1 1 0 0 1-1 1h-1.4a1 1 0 0 1-1-1v-.6H7.4v.6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 2.8V6M16 2.8V6"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 6.3L20 11l-6.1 1.7L12 19l-1.9-6.3L4 11l6.1-1.7z"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="18.5" r="2.5"/><circle cx="18" cy="5.5" r="2.5"/><path d="M8.5 18.5H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M9.5 6.5C6.6 7.6 5 9.9 5 12.6c0 2 1.3 3.4 3 3.4 1.6 0 2.9-1.3 2.9-3 0-1.5-1-2.6-2.4-2.9.3-1 1-1.9 2-2.5zM18.5 6.5c-2.9 1.1-4.5 3.4-4.5 6.1 0 2 1.3 3.4 3 3.4 1.6 0 2.9-1.3 2.9-3 0-1.5-1-2.6-2.4-2.9.3-1 1-1.9 2-2.5z"/></symbol>
+</svg>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="#top" aria-label="Студия красоты Каре — на главную">
+      <span class="logo__mark">К</span>
+      <span class="logo__text"><b>КАРЕ</b><span>студия красоты</span></span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#about">О салоне</a>
+      <a href="#services">Услуги</a>
+      <a href="#works">Работы</a>
+      <a href="#masters">Мастера</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header__right">
+      <a class="header__phone" href="tel:+79212624308">
+        <svg class="ic"><use href="#i-phone"/></svg>+7 921 262-43-08
+      </a>
+      <button class="btn btn--gold btn--sm" type="button" data-booking>Записаться</button>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<nav class="mnav" id="mnav" aria-label="Мобильное меню">
+  <a href="#about">О салоне</a>
+  <a href="#services">Услуги</a>
+  <a href="#works">Работы</a>
+  <a href="#masters">Мастера</a>
+  <a href="#reviews">Отзывы</a>
+  <a href="#contacts">Контакты</a>
+  <div class="mnav__foot">
+    <a class="mnav__phone" href="tel:+79212624308">
+      <svg class="ic"><use href="#i-phone"/></svg>+7 921 262-43-08
+    </a>
+    <button class="btn btn--gold" type="button" data-booking>Записаться онлайн</button>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="hero__bg">
+    <img src="kare_photo03.jpg" alt="Фасад студии красоты Каре: вход с белыми колоннами и стеклянной дверью">
+  </div>
+  <div class="hero__content">
+    <div class="container">
+      <div class="hero__box">
+        <span class="eyebrow">Студия красоты · Калининград</span>
+        <h1>Стрижки, окрашивание и уход — <em>для всей семьи</em></h1>
+        <p class="hero__sub">Светлый и уютный салон в Ленинградском районе. Женский, мужской и детский мастер, сложные окрашивания, маникюр и педикюр — по записи, в удобное для вас время.</p>
+        <div class="hero__facts">
+          <span class="fact"><svg class="ic ic--fill"><use href="#i-star"/></svg>Рейтинг 4,4 на Яндекс Картах</span>
+          <span class="fact"><svg class="ic"><use href="#i-clock"/></svg>Пн–Сб 10:00–19:00 · Вс 10:00–18:00</span>
+          <span class="fact"><svg class="ic"><use href="#i-pin"/></svg>ул. Виктора Денисова, 16 к1</span>
+        </div>
+        <div class="hero__cta">
+          <button class="btn btn--gold" type="button" data-booking>
+            Записаться онлайн<svg class="ic"><use href="#i-arrow"/></svg>
+          </button>
+          <a class="hero__call" href="tel:+79212624308">
+            <small>или позвоните нам</small>
+            <b>+7 921 262-43-08</b>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <div class="ticker__group">
+        <span>Женские стрижки</span><i class="t-dot"></i>
+        <span>Мужские стрижки</span><i class="t-dot"></i>
+        <span>Детские стрижки</span><i class="t-dot"></i>
+        <span>Сложные окрашивания</span><i class="t-dot"></i>
+        <span>Маникюр</span><i class="t-dot"></i>
+        <span>Педикюр</span><i class="t-dot"></i>
+        <span>Запись по телефону +7 921 262-43-08</span><i class="t-dot"></i>
+      </div>
+      <div class="ticker__group">
+        <span>Женские стрижки</span><i class="t-dot"></i>
+        <span>Мужские стрижки</span><i class="t-dot"></i>
+        <span>Детские стрижки</span><i class="t-dot"></i>
+        <span>Сложные окрашивания</span><i class="t-dot"></i>
+        <span>Маникюр</span><i class="t-dot"></i>
+        <span>Педикюр</span><i class="t-dot"></i>
+        <span>Запись по телефону +7 921 262-43-08</span><i class="t-dot"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__text rv">
+        <span class="eyebrow eyebrow--dark">О салоне</span>
+        <h2 style="font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(28px,4vw,44px);line-height:1.16;margin-top:14px">Светлый салон, куда хочется возвращаться</h2>
+        <p>«Каре» — это светлый и уютный салон красоты с современным дизайном и удобным расположением в Ленинградском районе Калининграда. Здесь работают мастера, которых клиенты называют настоящими профессионалами своего дела.</p>
+        <p>Мы принимаем по предварительной записи: без очередей и спешки. Приходите за стрижкой, новым цветом волос или ухоженными руками — всей семьёй, включая самых маленьких гостей.</p>
+        <ul class="about__list">
+          <li><svg class="ic"><use href="#i-scissors"/></svg>Женский, мужской и детский мастер</li>
+          <li><svg class="ic"><use href="#i-color"/></svg>Сложные окрашивания</li>
+          <li><svg class="ic"><use href="#i-polish"/></svg>Маникюр и педикюр</li>
+          <li><svg class="ic"><use href="#i-calendar"/></svg>Приём по записи — без ожидания</li>
+          <li><svg class="ic"><use href="#i-car"/></svg>Парковка рядом с салоном</li>
+        </ul>
+        <div class="about__facts">
+          <div class="afact"><b>4,4<i>*</i></b><span>рейтинг на Яндекс Картах</span></div>
+          <div class="afact"><b>9</b><span>отзывов гостей о салоне</span></div>
+          <div class="afact"><b>6</b><span>направлений услуг</span></div>
+          <div class="afact"><b>1</b><span>этаж — удобный вход</span></div>
+        </div>
+      </div>
+      <div class="about__media rv">
+        <div class="about__badge"><b>4,4</b><span>рейтинг гостей</span></div>
+        <div class="about__main">
+          <img src="kare_photo07.jpg" alt="Атмосфера салона Каре: гостьи и мастер в светлом интерьере" loading="lazy">
+        </div>
+        <div class="about__sub">
+          <img src="kare_photo21.jpg" alt="Рабочая зона салона Каре: кресла, зеркало и косметика" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="eyebrow">Услуги и цены</span>
+      <h2>Всё для волос и ухоженных рук</h2>
+      <p>Запись к любому мастеру — по телефону или через форму на сайте. Точную стоимость администратор назовёт при записи.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv" data-booking data-service="women">
+        <div class="svc__ic"><svg class="ic"><use href="#i-scissors"/></svg></div>
+        <h3>Женская стрижка</h3>
+        <p>Подберём форму с учётом структуры волос и вашего образа — от классики до модных линий.</p>
+        <div class="svc__row"><span class="svc__price">по записи</span><button class="btn btn--ghost btn--sm" type="button" data-booking data-service="women">Записаться</button></div>
+      </article>
+      <article class="svc rv" data-booking data-service="men">
+        <div class="svc__ic"><svg class="ic"><use href="#i-scissors"/></svg></div>
+        <h3>Мужская стрижка</h3>
+        <p>Аккуратная форма, чистые линии и стабильный результат — у нас стригутся годами.</p>
+        <div class="svc__row"><span class="svc__price">по записи</span><button class="btn btn--ghost btn--sm" type="button" data-booking data-service="men">Записаться</button></div>
+      </article>
+      <article class="svc rv" data-booking data-service="kids">
+        <div class="svc__ic"><svg class="ic"><use href="#i-kid"/></svg></div>
+        <h3>Детские стрижки</h3>
+        <p>Терпеливо и бережно — стрижём даже самых маленьких гостей без слёз и спешки.</p>
+        <div class="svc__row"><span class="svc__price">по записи</span><button class="btn btn--ghost btn--sm" type="button" data-booking data-service="kids">Записаться</button></div>
+      </article>
+      <article class="svc rv" data-booking data-service="color">
+        <div class="svc__ic"><svg class="ic"><use href="#i-color"/></svg></div>
+        <h3>Сложное окрашивание</h3>
+        <p>Многотональные блонды, глубокие тёмные оттенки и яркие акценты — бережно к волосам.</p>
+        <div class="svc__row"><span class="svc__price">по записи</span><button class="btn btn--ghost btn--sm" type="button" data-booking data-service="color">Записаться</button></div>
+      </article>
+      <article class="svc rv" data-booking data-service="manicure">
+        <div class="svc__ic"><svg class="ic"><use href="#i-polish"/></svg></div>
+        <h3>Маникюр</h3>
+        <p>Ухоженные руки и аккуратное покрытие — идеальный финальный штрих любого образа.</p>
+        <div class="svc__row"><span class="svc__price">по записи</span><button class="btn btn--ghost btn--sm" type="button" data-booking data-service="manicure">Записаться</button></div>
+      </article>
+      <article class="svc rv" data-booking data-service="pedicure">
+        <div class="svc__ic"><svg class="ic"><use href="#i-spa"/></svg></div>
+        <h3>Педикюр</h3>
+        <p>Комфортная процедура с вниманием к деталям — лёгкость и красота в каждом шаге.</p>
+        <div class="svc__row"><span class="svc__price">по записи</span><button class="btn btn--ghost btn--sm" type="button" data-booking data-service="pedicure">Записаться</button></div>
+      </article>
+    </div>
+    <p class="services__note rv"><svg class="ic"><use href="#i-spark"/></svg>Стоимость зависит от длины и густоты волос, выбранной техники и сложности работы. Точную цену администратор назовёт при записи.</p>
+    <div class="svc-cta rv">
+      <div>
+        <h3>Не знаете, с чего начать?</h3>
+        <p>Позвоните или оставьте заявку — подберём мастера и удобное время.</p>
+      </div>
+      <div class="svc-cta__btns">
+        <button class="btn btn--gold" type="button" data-booking>Записаться сейчас<svg class="ic"><use href="#i-arrow"/></svg></button>
+        <a class="callink" href="tel:+79212624308"><svg class="ic"><use href="#i-phone"/></svg>+7 921 262-43-08</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WORKS ===================== -->
+<section class="section works" id="works">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="eyebrow eyebrow--dark">Работы мастеров</span>
+      <h2>Результаты, которые носят с удовольствием</h2>
+      <p>Стрижки и окрашивания, выполненные мастерами студии «Каре». Каждый образ — это форма, цвет и настроение, подобранные под клиента.</p>
+    </div>
+    <div class="works-grid">
+      <figure class="work rv">
+        <img src="kare_photo24.jpg" alt="Стрижка боб на светлых волосах — работа мастера студии Каре" loading="lazy">
+        <figcaption><span class="work__tag">Стрижка</span><b>Боб: чистая линия</b></figcaption>
+      </figure>
+      <figure class="work rv">
+        <img src="kare_photo05.jpg" alt="Окрашивание в глубокий каштановый оттенок на длинных волнистых волосах" loading="lazy">
+        <figcaption><span class="work__tag">Окрашивание</span><b>Глубокий каштан</b></figcaption>
+      </figure>
+      <figure class="work rv">
+        <img src="kare_photo22.jpg" alt="Многотональный блонд на волосах до плеч" loading="lazy">
+        <figcaption><span class="work__tag">Окрашивание</span><b>Многотональный блонд</b></figcaption>
+      </figure>
+      <figure class="work rv">
+        <img src="kare_photo18.jpg" alt="Короткая стрижка с розовым оттенком на светлых волосах" loading="lazy">
+        <figcaption><span class="work__tag">Окрашивание</span><b>Розовый акцент на блонде</b></figcaption>
+      </figure>
+      <figure class="work rv">
+        <img src="kare_photo27.jpg" alt="Золотистые вьющиеся волосы до плеч" loading="lazy">
+        <figcaption><span class="work__tag">Окрашивание и укладка</span><b>Золотистые локоны</b></figcaption>
+      </figure>
+      <figure class="work rv">
+        <img src="kare_photo26.jpg" alt="Короткая текстурная стрижка на вьющихся волосах" loading="lazy">
+        <figcaption><span class="work__tag">Стрижка</span><b>Текстурная короткая</b></figcaption>
+      </figure>
+      <figure class="work rv">
+        <img src="kare_photo23.jpg" alt="Длинные светлые волосы, ровный срез" loading="lazy">
+        <figcaption><span class="work__tag">Стрижка и уход</span><b>Ровный срез на длинных</b></figcaption>
+      </figure>
+      <figure class="work rv">
+        <img src="kare_photo28.jpg" alt="Светлые волнистые волосы, мягкая укладка" loading="lazy">
+        <figcaption><span class="work__tag">Укладка</span><b>Мягкие волны</b></figcaption>
+      </figure>
+    </div>
+    <p class="works-foot rv">Хотите так же? Запишитесь — мастер подберёт вариант под ваши волосы.</p>
+    <div style="text-align:center;margin-top:22px" class="rv">
+      <button class="btn btn--gold" type="button" data-booking>Записаться на преображение<svg class="ic"><use href="#i-arrow"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MASTERS ===================== -->
+<section class="section masters" id="masters">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="eyebrow eyebrow--dark">Мастера</span>
+      <h2>К вам приходят по имени</h2>
+      <p>Имена, которые гости «Каре» чаще всего называют в отзывах.</p>
+    </div>
+    <div class="masters-grid">
+      <article class="master rv">
+        <div class="master__top">
+          <div class="avatar av-1">К</div>
+          <div>
+            <h3>Карина</h3>
+            <span>Мастер женских и мужских стрижек</span>
+          </div>
+        </div>
+        <q>Душевная, с чувством юмора и позитива. В салоне всегда дружелюбная атмосфера и не хочется оттуда уходить</q>
+        <div class="master__exp"><svg class="ic"><use href="#i-spark"/></svg>К ней ходят с 2019 года</div>
+        <p class="master__src">По отзывам гостей на Яндекс Картах</p>
+      </article>
+      <article class="master rv">
+        <div class="master__top">
+          <div class="avatar av-3">И</div>
+          <div>
+            <h3>Ирина</h3>
+            <span>Парикмахер</span>
+          </div>
+        </div>
+        <q>Настоящий профессионал и мастер своего дела. Парикмахер экстра класса! Спасибо за работу и хорошее настроение</q>
+        <div class="master__exp"><svg class="ic"><use href="#i-spark"/></svg>Гости называют её «золотые руки»</div>
+        <p class="master__src">По отзывам гостей на Яндекс Картах</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="eyebrow">Отзывы клиентов</span>
+      <h2>Что говорят наши гости</h2>
+      <div class="rev-rating">
+        <span class="rev-rating__num">4,4</span>
+        <span class="stars" aria-label="Оценка 4,4 из 5">
+          <svg class="ic ic--fill"><use href="#i-star"/></svg>
+          <svg class="ic ic--fill"><use href="#i-star"/></svg>
+          <svg class="ic ic--fill"><use href="#i-star"/></svg>
+          <svg class="ic ic--fill"><use href="#i-star"/></svg>
+          <svg class="ic ic--fill ic--off"><use href="#i-star"/></svg>
+        </span>
+        <small>средняя оценка на Яндекс Картах</small>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <article class="rev rv">
+        <div class="rev__head">
+          <div class="avatar avatar--s av-1">З</div>
+          <div><b>Захария Бурдюк</b><span>15 мая</span></div>
+        </div>
+        <p>Очень хорошее место! Классно постригли, хожу к Карине и всем довольна. Всё супер, буду продолжать ходить только сюда и никуда больше</p>
+        <div class="rev__foot"><svg class="ic"><use href="#i-quote"/></svg>Отзыв с Яндекс Карт</div>
+      </article>
+      <article class="rev rv">
+        <div class="rev__head">
+          <div class="avatar avatar--s av-2">В</div>
+          <div><b>Виктория Кисель</b><span>10 ноября 2024</span></div>
+        </div>
+        <p>Отличный мастер Карина!!! Хожу только к ней.Душевная, с чувством юмора и позитива. В салоне всегда дружелюбная атмосфера и не хочется оттуда уходить))</p>
+        <div class="rev__foot"><svg class="ic"><use href="#i-quote"/></svg>Отзыв с Яндекс Карт</div>
+      </article>
+      <article class="rev rv">
+        <div class="rev__head">
+          <div class="avatar avatar--s av-3">Д</div>
+          <div><b>Денис М</b><span>7 июля</span></div>
+        </div>
+        <p>Отличный мужской мастер Карина, стригусь у нее с 2019 года!</p>
+        <div class="rev__foot"><svg class="ic"><use href="#i-quote"/></svg>Отзыв с Яндекс Карт</div>
+      </article>
+      <article class="rev rv">
+        <div class="rev__head">
+          <div class="avatar avatar--s av-4">М</div>
+          <div><b>Марина Кузнецова</b><span>1 июня 2023</span></div>
+        </div>
+        <p>Очень светлый и уютный салон красоты. Современный дизайн, удобное местоположение. В салоне работают настоящие профессионалы и мастера своего дела. Особенно хочу отметить работу и золотые руки Ирины. Парикмахер экстра класса! Спасибо за работу и хорошее настроение.</p>
+        <div class="rev__foot"><svg class="ic"><use href="#i-quote"/></svg>Отзыв с Яндекс Карт</div>
+      </article>
+      <article class="rev rv">
+        <div class="rev__head">
+          <div class="avatar avatar--s av-5">С</div>
+          <div><b>Сергей</b><span>21 марта 2023</span></div>
+        </div>
+        <p>Чисто, Уютно. Адекватный ценник. Хорошие мастера. Вежливо и тактично. Рекомендую новенькую Ирину - золотые руки.</p>
+        <div class="rev__foot"><svg class="ic"><use href="#i-quote"/></svg>Отзыв с Яндекс Карт</div>
+      </article>
+      <article class="rev rv">
+        <div class="rev__head">
+          <div class="avatar avatar--s av-6">М</div>
+          <div><b>Марина Губарева</b><span>2 августа 2023</span></div>
+        </div>
+        <p>Хороший,светлый,просторный салон.Находится в нем комфортно.Прекрасный мастер</p>
+        <div class="rev__foot"><svg class="ic"><use href="#i-quote"/></svg>Отзыв с Яндекс Карт</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACTS ===================== -->
+<section class="section contacts" id="contacts">
+  <div class="container">
+    <div class="sec-head rv">
+      <span class="eyebrow eyebrow--dark">Контакты</span>
+      <h2>Ждём вас в «Каре»</h2>
+    </div>
+    <div class="contacts-grid">
+      <div class="cinfo rv">
+        <div class="cinfo__row">
+          <div class="cinfo__ic"><svg class="ic"><use href="#i-pin"/></svg></div>
+          <div><small>Адрес</small><b>Калининград, ул. Виктора Денисова, 16 к1, 1 этаж<br>Ленинградский район</b></div>
+        </div>
+        <div class="cinfo__row">
+          <div class="cinfo__ic"><svg class="ic"><use href="#i-phone"/></svg></div>
+          <div><small>Телефон</small><b><a href="tel:+79212624308">+7 921 262-43-08</a></b></div>
+        </div>
+        <div class="cinfo__row">
+          <div class="cinfo__ic"><svg class="ic"><use href="#i-clock"/></svg></div>
+          <div><small>Режим работы</small><b>Пн–Сб: 10:00–19:00 · Вс: 10:00–18:00</b></div>
+        </div>
+        <div class="cinfo__row">
+          <div class="cinfo__ic"><svg class="ic"><use href="#i-parking"/></svg></div>
+          <div><small>Парковка</small><b>Автомобильная парковка рядом со зданием салона</b></div>
+        </div>
+        <div class="cinfo__row">
+          <div class="cinfo__ic"><svg class="ic"><use href="#i-calendar"/></svg></div>
+          <div><small>Запись</small><b>По предварительной записи — по телефону или через форму</b></div>
+        </div>
+        <div class="cinfo__btns">
+          <button class="btn btn--gold" type="button" data-booking>Записаться<svg class="ic"><use href="#i-arrow"/></svg></button>
+          <a class="btn btn--line" href="tel:+79212624308"><svg class="ic"><use href="#i-phone"/></svg>Позвонить</a>
+        </div>
+        <a class="route-link" href="https://yandex.ru/maps/org/kare/95985406780/" target="_blank" rel="noopener">
+          <svg class="ic"><use href="#i-route"/></svg>Построить маршрут на Яндекс Картах
+        </a>
+      </div>
+      <div class="contacts__media rv">
+        <figure class="ph-a">
+          <img src="kare_photo09.jpg" alt="Здание, где расположена студия Каре, и парковка автомобилей перед входом" loading="lazy">
+          <figcaption><svg class="ic"><use href="#i-parking"/></svg>Парковка для гостей — прямо у здания</figcaption>
+        </figure>
+        <figure class="ph-b">
+          <img src="kare_photo06.jpg" alt="Фасад студии красоты Каре с вывеской и перечнем услуг" loading="lazy">
+          <figcaption><svg class="ic"><use href="#i-pin"/></svg>Нас легко найти по вывеске «КАРЕ»</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <a class="logo" href="#top" aria-label="Студия красоты Каре">
+      <span class="logo__mark">К</span>
+      <span class="logo__text"><b>КАРЕ</b><span>студия красоты</span></span>
+    </a>
+    <p>Калининград, ул. Виктора Денисова, 16 к1 · <a href="tel:+79212624308" style="color:inherit">+7 921 262-43-08</a></p>
+    <div class="footer__legal">
+      <p>ИП · ИНН 391406558450</p>
+      <p>Информация на сайте носит справочный характер и не является публичной офертой</p>
+    </div>
+  </div>
+<div class="footer-brand">
+  <span class="brand-made">created by</span>
+  <a class="brand-link" href="https://t.me/ALTAVALTA" target="_blank" rel="noopener">
+    <span class="sig-name"><b>A</b><b>L</b><b>T</b><b>A</b><b class="brand-core">V</b><b>A</b><b>L</b><b>T</b><b>A</b></span>
+  </a>
+</div>
+</footer>
+
+<!-- ===================== MODAL ===================== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal__panel" id="modalPanel">
+    <button class="modal__close" type="button" aria-label="Закрыть окно записи">
+      <svg class="ic"><use href="#i-close"/></svg>
+    </button>
+    <div class="modal__side">
+      <span class="eyebrow">Онлайн-запись</span>
+      <h3 id="modalTitle">Запишитесь на удобное время</h3>
+      <p>Оставьте контакты — администратор перезвонит, подтвердит запись и ответит на вопросы.</p>
+      <p style="font-size:13px;color:#8d8168">Пн–Сб 10:00–19:00 · Вс 10:00–18:00</p>
+      <a class="modal__phone" href="tel:+79212624308">
+        <svg class="ic"><use href="#i-phone"/></svg>
+        <span><b>+7 921 262-43-08</b><span>удобнее по телефону — звоните</span></span>
+      </a>
+    </div>
+    <div class="modal__form">
+  <form id="bookingForm" novalidate>
+<a class="modal__phone" href="tel:+79212624308" style="display:none">
+      <svg class="ic"><use href="#i-phone"/></svg>
+      <span><b>+7 921 262-43-08</b><span>удобнее по телефону — звоните</span></span>
+    </a>
+        <h4>Форма записи</h4>
+        <div class="f-grid">
+          <div class="field">
+            <label for="bk-name">Имя</label>
+            <input id="bk-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться">
+            <small class="field__err">Пожалуйста, укажите имя</small>
+          </div>
+          <div class="field">
+            <label for="bk-phone">Телефон</label>
+            <input id="bk-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="18" placeholder="+7 (___) ___-__-__">
+            <small class="field__err">Введите корректный номер телефона</small>
+          </div>
+          <div class="field">
+            <label for="bk-service">Услуга</label>
+            <select id="bk-service" name="service">
+              <option value="women">Женская стрижка</option>
+              <option value="men">Мужская стрижка</option>
+              <option value="kids">Детская стрижка</option>
+              <option value="color">Окрашивание (в т. ч. сложное)</option>
+              <option value="manicure">Маникюр</option>
+              <option value="pedicure">Педикюр</option>
+              <option value="other">Другое / нужна консультация</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bk-time">Удобное время</label>
+            <select id="bk-time" name="time">
+              <option value="morning">Утро (10:00–13:00)</option>
+              <option value="day">День (13:00–16:00)</option>
+              <option value="evening">Вечер (16:00–19:00)</option>
+              <option value="any">Любое время</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label for="bk-comment">Комментарий</label>
+            <textarea id="bk-comment" name="comment" rows="3" placeholder="Пожелания, мастер, дата — всё, что важно учесть"></textarea>
+          </div>
+        </div>
+        <button class="btn btn--gold btn--full modal__submit" type="submit">Отправить заявку<svg class="ic"><use href="#i-arrow"/></svg></button>
+        <p class="modal__agree">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+      </form>
+      <div class="modal__success" id="modalSuccess">
+        <div class="ok"><svg class="ic"><use href="#i-check"/></svg></div>
+        <h3>Заявка отправлена</h3>
+        <p>Спасибо! Администратор студии «Каре» свяжется с вами в ближайшее время, чтобы подтвердить запись.</p>
+        <p style="margin-top:10px;font-size:14px">Если удобно быстрее — позвоните: <a href="tel:+79212624308" style="color:var(--gold-d);font-weight:700">+7 921 262-43-08</a></p>
+        <button class="btn btn--line" type="button" id="successClose">Хорошо</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- Header scroll state ---------- */
+  var header = document.getElementById('header');
+  var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 24); };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---------- Burger menu ---------- */
+  var burger = document.getElementById('burger');
+  var mnav = document.getElementById('mnav');
+  function setMenu(open){
+    burger.classList.toggle('open', open);
+    mnav.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+    document.body.classList.toggle('lock', open);
+  }
+  burger.addEventListener('click', function(){ setMenu(!mnav.classList.contains('open')); });
+  mnav.querySelectorAll('a, button').forEach(function(el){
+    el.addEventListener('click', function(){ setMenu(false); });
+  });
+
+  /* ---------- Reveal on scroll ---------- */
+  var revealEls = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ entry.target.classList.add('on'); io.unobserve(entry.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -30px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('on'); });
+  }
+
+  /* ---------- Modal ---------- */
+  var modal = document.getElementById('modal');
+  var panel = document.getElementById('modalPanel');
+  var form = document.getElementById('bookingForm');
+  var successBox = document.getElementById('modalSuccess');
+  var serviceSelect = document.getElementById('bk-service');
+  var lastFocus = null;
+
+  function openModal(service){
+    lastFocus = document.activeElement;
+    form.hidden = false;
+    successBox.classList.remove('show');
+    if(service){
+      var opts = serviceSelect.options;
+      for(var i=0;i<opts.length;i++){
+        if(opts[i].value === service){ serviceSelect.selectedIndex = i; break; }
+      }
+    }
+    modal.classList.add('open');
+    document.body.classList.add('lock');
+    setTimeout(function(){ document.getElementById('bk-name').focus(); }, 80);
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    document.body.classList.remove('lock');
+    if(lastFocus && lastFocus.focus){ lastFocus.focus(); }
+    setTimeout(function(){
+      if(successBox.classList.contains('show')){
+        form.reset();
+        successBox.classList.remove('show');
+        form.hidden = false;
+        clearErrors();
+      }
+    }, 320);
+  }
+
+  document.querySelectorAll('[data-booking]').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.stopPropagation();
+      var host = el.closest('[data-service]');
+      var service = el.getAttribute('data-service') || (host ? host.getAttribute('data-service') : null);
+      openModal(service);
+    });
+  });
+  modal.querySelector('.modal__close').addEventListener('click', closeModal);
+  document.getElementById('successClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal){ closeModal(); } });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      if(modal.classList.contains('open')){ closeModal(); }
+      else if(mnav.classList.contains('open')){ setMenu(false); }
+    }
+  });
+  panel.addEventListener('click', function(e){ e.stopPropagation(); });
+
+  /* ---------- Form validation & submit ---------- */
+  function clearErrors(){
+    form.querySelectorAll('.field.err').forEach(function(f){ f.classList.remove('err'); });
+  }
+  function setErr(input, on){
+    var field = input.closest('.field');
+    if(field){ field.classList.toggle('err', on); }
+  }
+
+  /* ---------- Phone mask (+7 (___) ___-__-__) ---------- */
+  function formatPhone(val){
+    var d = val.replace(/\D/g, '');
+    if(d.charAt(0) === '8'){ d = '7' + d.slice(1); }
+    if(d.charAt(0) !== '7'){ d = '7' + d; }
+    d = d.slice(0, 11);
+    var out = '+7';
+    if(d.length > 1){ out += ' (' + d.slice(1, 4); }
+    if(d.length >= 4){ out += ') ' + d.slice(4, 7); }
+    if(d.length >= 7){ out += '-' + d.slice(7, 9); }
+    if(d.length >= 9){ out += '-' + d.slice(9, 11); }
+    return out;
+  }
+  phoneInput.addEventListener('input', function(){
+    var pos = phoneInput.selectionStart;
+    var prev = phoneInput.value;
+    var f = formatPhone(phoneInput.value);
+    if(f !== prev){ phoneInput.value = f; }
+    var field = phoneInput.closest('.field');
+    if(field){ field.classList.remove('err'); }
+  });
+  phoneInput.addEventListener('blur', function(){
+    if(phoneInput.value.trim() !== ''){ phoneInput.value = formatPhone(phoneInput.value); }
+  });
+  form.addEventListener('input', function(e){
+    var f = e.target.closest('.field');
+    if(f){ f.classList.remove('err'); }
+  });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    clearErrors();
+    var nameInput = document.getElementById('bk-name');
+    var phoneInput = document.getElementById('bk-phone');
+    var ok = true;
+    if(nameInput.value.trim().length < 2){ setErr(nameInput, true); ok = false; }
+    var digits = phoneInput.value.replace(/\D/g, '');
+    if(digits.length !== 11 || digits.charAt(0) !== '7'){ setErr(phoneInput, true); ok = false; }
+    if(!ok){
+      var firstErr = form.querySelector('.field.err input');
+      if(firstErr){ firstErr.focus(); }
+      return;
+    }
+    // ===== ВОРКЕР (Cloudflare altavalta-leads, source kare) =====
+    // БОЕВОЙ режим: заявка уходит всегда, кроме локального открытия (localhost/file)
+    var host = window.location.hostname || '';
+    var isLocal = (host === 'localhost' || host === '127.0.0.1' || host === '' || window.location.protocol === 'file:');
+    if (isLocal) {
+      alert('Демо-режим: заявка не отправляется. На боевом сайте она уйдёт администратору.\n\n' + nameInput.value.trim() + ', ' + phoneInput.value.trim() + ' — ' + (document.getElementById('bk-service').selectedOptions[0] || {}).text);
+      return;
+    }
+
+    var payload = {
+      name: nameInput.value.trim(),
+      phone: phoneInput.value.trim(),
+      service: (document.getElementById('bk-service').selectedOptions[0] || {}).text || '',
+      time: (document.getElementById('bk-time').selectedOptions[0] || {}).text || '',
+      comment: (document.getElementById('bk-comment') ? document.getElementById('bk-comment').value.trim() : ''),
+      source: 'kare'
+    };
+    var btn = form.querySelector('button[type="submit"]');
+    var oldLabel = btn.innerHTML;
+    btn.disabled = true; btn.textContent = 'Отправляем…';
+    var ctrl = new AbortController();
+    var timer = setTimeout(function(){ ctrl.abort(); }, 20000);
+    fetch('https://altavalta-leads.altavalta.workers.dev/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'X-Lead-Key': 'AV-1UqZW0lEhgXpGRBjkG1TF0yn'},
+      body: JSON.stringify(payload),
+      signal: ctrl.signal
+    }).then(function(r){
+      return r.text().then(function(t){
+        try{return JSON.parse(t);}catch(e){return {ok:false,http:r.status,raw:t.slice(0,80)};}
+      });
+    }).then(function(res){
+      clearTimeout(timer);
+      if (res && res.ok){
+        form.hidden = true;
+        successBox.classList.add('show');
+      } else {
+        btn.disabled = false; btn.innerHTML = oldLabel;
+        alert('Не удалось отправить заявку. Позвоните нам: +7 921 262-43-08');
+      }
+    }).catch(function(){
+      clearTimeout(timer);
+      btn.disabled = false; btn.innerHTML = oldLabel;
+      alert('Не удалось отправить заявку. Позвоните нам: +7 921 262-43-08');
+    });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var demo = document.getElementById('demoRibbon');
+  var demoBtn = document.getElementById('demoRemove');
+  if (demo && demoBtn){
+    demoBtn.addEventListener('click', function(){
+      document.body.classList.add('demo-off');
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
