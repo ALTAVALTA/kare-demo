@@ -1112,6 +1112,8 @@ ym(113699088, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
   var form = document.getElementById('bookingForm');
   var successBox = document.getElementById('modalSuccess');
   var serviceSelect = document.getElementById('bk-service');
+  var phoneInput = document.getElementById('bk-phone');
+  var nameInput = document.getElementById('bk-name');
   var lastFocus = null;
 
   function openModal(service){
@@ -1202,8 +1204,6 @@ ym(113699088, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLa
   form.addEventListener('submit', function(e){
     e.preventDefault();
     clearErrors();
-    var nameInput = document.getElementById('bk-name');
-    var phoneInput = document.getElementById('bk-phone');
     var ok = true;
     if(nameInput.value.trim().length < 2){ setErr(nameInput, true); ok = false; }
     var digits = phoneInput.value.replace(/\D/g, '');
